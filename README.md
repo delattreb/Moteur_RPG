@@ -48,25 +48,25 @@ La [spécification du site](SITE_LORE_ET_CARTE.md) prévoit :
 - Une distinction entre lieux inconnus, connus de nom et visités.
 - Une géographie stable et des ressources publiques excluant les secrets du MJ.
 
-**Le site et la carte restent à construire après validation de l'univers.** La version 1.3.0 fournit leur spécification ; elle ne publie pas encore de site et ne réalise aucune synchronisation automatique.
+La version 1.3.0 a posé cette spécification. Le prototype Clairval implémente désormais la carte et l’import des déplacements publics ; l’adaptation à un autre univers, le zoom et la synchronisation automatique restent à réaliser.
 
 ## Carnet personnel illustré
 
 La fiche du personnage prend la forme d'un carnet personnel : identité et portrait, état actuel, savoir-faire, possessions et engagements. Les pages comportent des annotations et des images stylisées selon l'univers, avec une continuité de visage, de tenue et d'objets. Le texte reste accessible indépendamment des illustrations.
 
-Voir [la spécification du carnet](CARNET_PERSONNAGE.md) et [le modèle public vierge](MODELES/CARNET_PERSONNAGE.md). Comme le site de lore et l'atlas, ce carnet reste à implémenter ; ses contenus suivent uniquement les faits joués et connus.
+Voir [la spécification du carnet](CARNET_PERSONNAGE.md) et [le modèle public vierge](MODELES/CARNET_PERSONNAGE.md). Le prototype Clairval implémente la reprise, les missions, les possessions et l’état narratif ; l’identité complète et les savoir-faire restent à intégrer. Ses contenus de campagne suivent les faits publics importés.
 
 ## PNJ et relations
 
 Une galerie de portraits ouvre les pages individuelles du carnet : identité connue, rencontres marquantes, relation observable, affaires en cours et dernière nouvelle. Les personnes seulement évoquées restent « connues de nom », sans portrait inventé. Les relations sont décrites par les faits, sans jauge de loyauté secrète.
 
-Voir [PNJ et relations](PNJ_ET_RELATIONS.md) et [le modèle public de PNJ](MODELES/PNJ_PUBLIC.md). La galerie reste à implémenter avec le site.
+Voir [PNJ et relations](PNJ_ET_RELATIONS.md) et [le modèle public de PNJ](MODELES/PNJ_PUBLIC.md). La galerie illustrée existe dans la démonstration ; le mode campagne affiche les rencontres importées. Les fiches de relation dynamiques restent à intégrer.
 
 ## Missions et continuité
 
 Les [missions du carnet](MISSIONS_ET_GUIDAGE.md) sont réparties entre En cours, Possibilités et Historique. Le guidage léger présente les faits et une suggestion discrète si nécessaire, sans dévoiler de solution. Un [modèle public](MODELES/MISSION_PUBLIQUE.md) décrit chaque mission.
 
-La [sauvegarde et la reprise](SAUVEGARDE_ET_REPRISE.md) prévoient un enregistrement automatique vérifié à la fin d'une session ou lors d'une interruption, avec état MJ privé, projection publique et résumé dans le carnet. Une réparation ne rejoue ni ne recompte les événements. **Cette persistance et les pages de mission restent à implémenter.**
+La [sauvegarde et la reprise](SAUVEGARDE_ET_REPRISE.md) prévoient un enregistrement automatique vérifié à la fin d'une session ou lors d'une interruption, avec état MJ privé, projection publique et résumé dans le carnet. Une réparation ne rejoue ni ne recompte les événements. **La sauvegarde privée complète et son déclenchement automatique restent à implémenter.** Le prototype implémente les pages de mission, la projection publique locale et son export / import manuel.
 
 ## Construire un scénario adaptable
 
@@ -100,14 +100,16 @@ Les modèles et notes d'exemple destinés au MJ restent privés. Seuls les conte
 
 | Version | Évolution |
 | --- | --- |
-| 1.0.0 | Première base propre : intentions, conséquences, monde actif et modèles de jeu |
+| 1.8.0 | Carte explorable, campagne publique, missions, inventaire, état narratif et export / reprise |
+| 1.7.0 | Démonstration médiévale Clairval, interactions et distribution WebP allégée |
+| 1.6.0 | Missions à guidage léger et sauvegarde automatique : spécifications |
+| 1.5.0 | Galerie de PNJ et relations observables : spécification et modèle |
+| 1.4.0 | Carnet personnel illustré : spécification et modèle public |
+| 1.3.1 | Parcours réutilisable : questionnaire interrompu, validation et reprise |
+| 1.3.0 | Construction de campagne, univers, lore et spécification de carte progressive |
+| 1.2.0 | 60 sessions sur trente jours fictifs |
 | 1.1.0 | Démarches complètes, missions qui aboutissent et choix numérotés |
-| 1.2.0 | Campagne de 60 sessions de 10 à 15 minutes sur trente jours fictifs |
-| 1.7.0 | Missions à guidage léger et sauvegarde automatique : spécifications |
-| 1.5.0 | Galerie de PNJ, pages de carnet et relations observables : spécification et modèle public |
-| 1.4.0 | Carnet personnel illustré adapté à l'univers : spécification et modèle public |
-| 1.3.1 | Parcours réutilisable : nouvelle campagne, questionnaire interrompu, validation et reprise |
-| 1.3.0 | Construction de campagne, questionnaire d'univers, lore et spécification de carte progressive |
+| 1.0.0 | Première base propre du moteur narratif |
 
 Voir [l'historique détaillé](CHANGELOG.md) et [la release 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0).
 
@@ -120,3 +122,13 @@ Le dépôt contient le moteur générique, des modèles vierges et des exemples 
 ## Site médiéval Clairval
 
 Carte sur parchemin, menus illustrés, portraits et fiches consultables : [ouvrir la documentation Clairval](EXEMPLES/CLAIRVAL/README.md).
+
+Depuis la version 1.8.0 : exploration depuis Vaucombe, découverte de sept lieux, chemins parcourus et progression conservée dans le navigateur. Le parcours libre et la campagne publique restent séparés.
+
+Le mode **Ma campagne** permet aussi d’importer une projection publique des déplacements confirmés et du résumé de reprise, avec contrôle des révisions. Il reste séparé du parcours libre, sans synchronisation automatique avec la conversation. Voir le [guide d’import](EXEMPLES/CLAIRVAL/MISE_A_JOUR_CAMPAGNE.md).
+
+Le format public 3 relie aussi les missions et l’[inventaire de campagne](EXEMPLES/CLAIRVAL/INVENTAIRE_CAMPAGNE.md) : réceptions, consommations, transferts, pertes et dépenses sont conservés sans double décompte entre les sessions. Ces fonctions sont incluses dans la version 1.8.0.
+
+Le format public 4 ajoute l’[état du personnage](EXEMPLES/CLAIRVAL/ETAT_PERSONNAGE.md) dans le carnet : blessures, fatigue et effets temporaires, avec conséquences narratives et récupérations confirmées. Aucun score ni rétablissement automatique n’est ajouté.
+
+L’[export et la reprise de progression](EXEMPLES/CLAIRVAL/EXPORT_ET_REPRISE.md) permettent de transférer la projection publique vers un autre navigateur : fichier JSON, aperçu avant intégration et retour au carnet. Cette fonction conserve le format existant et ne remplace pas la sauvegarde privée du MJ.

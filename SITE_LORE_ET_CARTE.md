@@ -46,6 +46,8 @@ Intégrer la galerie et les pages individuelles selon PNJ_ET_RELATIONS.md, avec 
 ## Missions et résumé de reprise
 Prévoir les pages de MISSIONS_ET_GUIDAGE.md et le résumé public défini dans SAUVEGARDE_ET_REPRISE.md. Le site ne reçoit jamais les sources MJ. La validité d'une sauvegarde et l'actualisation du site sont vérifiées séparément. Ces fonctions restent à implémenter.
 
-## Démonstration Clairval — 1.7.0
+## Démonstration Clairval - 1.8.0
 
-[L’exemple Clairval](EXEMPLES/CLAIRVAL/README.md) implémente la présentation médiévale et les interactions statiques. Données fictives ; découverte progressive et synchronisation des sauvegardes restent à implémenter.
+[L’exemple Clairval](EXEMPLES/CLAIRVAL/README.md) implémente la présentation médiévale, l’exploration libre depuis Vaucombe et une carte de campagne issue des déplacements confirmés importés. La position, les trajets et les lieux révélés sont conservés dans le navigateur.
+
+Le mode campagne comprend les missions, l’inventaire, l’état narratif et le résumé de reprise. La projection publique est exportable et restaurable depuis un fichier JSON. Les formats publics 1 à 4 sont lus ; les données d’exemple restent séparées des faits de campagne. Le stockage privé complet du MJ, la synchronisation avec la conversation, l’adaptation automatique à d’autres mondes et les autres éléments de la spécification générale restent à réaliser.

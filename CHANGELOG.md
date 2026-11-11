@@ -1,7 +1,25 @@
 # Historique
 
+Versions du dépôt, classées de la plus récente à la plus ancienne. Les versions 1.3.1 à 1.7.0 étaient documentées sur main sans release GitHub dédiée.
+
 ## À venir
-Les évolutions seront décrites ici avant leur prochaine version.
+
+Aucune évolution supplémentaire annoncée.
+
+## 1.8.0 - 11 novembre 2026
+- Carte explorable depuis Vaucombe : sept lieux, chemins parcourus, position et progression locale.
+- Mode campagne séparé du parcours libre, alimenté par les faits publics confirmés importés en fin de session.
+- Missions : En cours, Possibilités et Historique, engagements acceptés, faits connus, décisions et issues confirmées.
+- Inventaire : réceptions, consommations, transferts, pertes et dépenses ; quantités inconnues conservées et soldes connus négatifs refusés.
+- État narratif du personnage : blessures, fatigue, effets temporaires, conséquences concrètes et récupérations confirmées, sans jauges ni guérison automatique.
+- Export JSON et restauration avec aperçu, retour au carnet et conservation des registres sans doublons.
+- Format public 4 ; lecture des formats 1, 2 et 3 conservée. Un modèle vierge et les guides sont fournis.
+- Distribution légère : illustration WebP partagée ; HTML autonome généré localement, PNG source et HTML généré exclus du dépôt.
+- Historique des versions du README remis dans l’ordre décroissant ; correction de l’entrée 1.6.0 qui avait été attribuée à tort à la 1.7.0.
+
+Validation : contrôles automatisés du parcours libre et de la campagne réussis. Une courte scène jouée a été rejouée dans le moteur de validation, exportée puis restaurée dans un stockage isolé : position, mission accomplie, objets, monnaie et blessure conservés sans double décompte. Aucune dépense n’a été jouée pendant cette scène ; les dépenses sont couvertes par les tests automatisés. Le rendu visuel et le téléchargement natif dans le navigateur restent à vérifier.
+
+Limites : projection publique locale, import manuel, aucune synchronisation automatique avec la conversation ni sauvegarde canonique privée du MJ. L’export de la partie de test reste hors du dépôt générique.
 
 ## 1.7.0 - 11 novembre 2026
 - Distribution allégée : illustration WebP de 358 Ko ; PNG source et HTML autonome exclus du dépôt.

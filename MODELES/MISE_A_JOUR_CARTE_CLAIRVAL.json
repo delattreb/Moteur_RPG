@@ -1,0 +1,18 @@
+{
+  "version": 4,
+  "campaignId": "clairval-ma-campagne",
+  "revision": 1,
+  "start": "vaucombe",
+  "events": [],
+  "moment": "À renseigner : dernier moment confirmé en partie",
+  "objective": "À renseigner : objectif connu du joueur",
+  "pending": "À renseigner : décision exacte laissée en attente",
+  "quests": [],
+  "inventory": {
+    "items": [],
+    "movements": []
+  },
+  "characterState": {
+    "events": []
+  }
+}

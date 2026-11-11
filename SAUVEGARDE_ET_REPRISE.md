@@ -2,6 +2,10 @@
 
 Fonctionnement retenu pour la future implémentation, non encore opérationnel. Le dépôt reste un référentiel sans service de persistance ni sauvegarde réelle de partie. Aucune automatisation externe n'est créée par ce document.
 
+Un [prototype de projection publique Clairval](EXEMPLES/CLAIRVAL/MISE_A_JOUR_CAMPAGNE.md) permet désormais d’importer les déplacements confirmés et une reprise de session dans le navigateur. Il ne remplace pas la sauvegarde canonique privée décrite ci-dessous et ne communique pas automatiquement avec la conversation.
+
+Le prototype permet aussi l’[export et la restauration de cette projection publique](EXEMPLES/CLAIRVAL/EXPORT_ET_REPRISE.md) depuis un fichier JSON. La reprise retrouve les registres importés et la dernière décision en attente ; elle ne reconstitue pas l’état privé complet du MJ et ne rend pas automatique la continuité entre conversations.
+
 ## Déclenchement
 Sauvegarder à chaque fin de session et sur interruption détectée ou demandée, sans redemander une confirmation ordinaire. Une fermeture brutale ou une perte de connexion peut empêcher ce déclenchement : ne pas garantir que des échanges non enregistrés sont récupérables.
 

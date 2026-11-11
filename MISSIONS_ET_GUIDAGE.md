@@ -1,6 +1,6 @@
 # Missions et guidage léger
 
-Spécification des pages de mission du futur carnet, non encore implémentées.
+Spécification des pages de mission du carnet. Le [prototype Clairval](EXEMPLES/CLAIRVAL/MISSIONS_CAMPAGNE.md) implémente désormais les trois onglets et leurs fiches à partir d’un import public de session. L’intégration automatique à une conversation ou à une sauvegarde privée complète reste à réaliser.
 
 ## Navigation
 - En cours : uniquement les missions acceptées et leurs objectifs concrets.

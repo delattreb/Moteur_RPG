@@ -18,7 +18,11 @@ Actualiser la fiche à partir des événements réellement joués. Pour chaque c
 
 Exemple de formulation, sans fait de campagne : « Épaule blessée pendant la traversée : porter une charge devient difficile. » Un rétablissement exige une cause établie ; une absence réelle ne guérit pas automatiquement le personnage.
 
+Le [prototype d’état du personnage Clairval](EXEMPLES/CLAIRVAL/ETAT_PERSONNAGE.md) implémente ces annotations narratives à partir d’un registre public d’événements importés : blessures, fatigue, effets temporaires, évolutions et levées confirmées. La consultation et le rechargement n’entraînent aucune récupération automatique ; les anciennes conséquences restent consultables dans le journal.
+
 Les possessions distinguent porté, transporté, stocké, prêté et perdu lorsque ces positions sont établies. Les transferts et quantités restent cohérents. Un montant inconnu reste inconnu. Une propriété cachée ou le contenu d'un document non lu ne doit pas être illustré ou décrit.
+
+Le [prototype d’inventaire Clairval](EXEMPLES/CLAIRVAL/INVENTAIRE_CAMPAGNE.md) implémente les possessions et monnaies par un registre public de mouvements importés. Il contrôle les quantités connues et préserve les quantités inconnues. Les prêts et emplacements de stockage de cette spécification restent à implémenter.
 
 Afficher seulement les engagements acceptés. Une proposition de mission n'est pas un objectif actif ; une promesse n'est pas réputée tenue par une intention future.
 
