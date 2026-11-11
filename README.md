@@ -1,147 +1,141 @@
 # Moteur RPG
 
-**Version du dépôt : 1.10.0** — [Première release : 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0)
+**Un jeu de rôle narratif en conversation, accompagné d’un carnet de campagne illustré.**
 
-Moteur de jeu de rôle narratif pour un joueur et un maître du jeu humain ou assistant. Il fournit les règles et les modèles pour créer un univers, préparer une campagne et faire évoluer l'histoire selon les décisions du joueur. Cette édition est un référentiel utilisable en conversation ; elle comprend une démonstration statique du site Clairval.
+[Ouvrir le site](https://delattreb.github.io/Moteur_RPG/) · [Release 1.10.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.10.0) · [Notes de version](RELEASE_NOTES.md)
 
-## Auvrenne — version 1.10.0
+<a href="https://delattreb.github.io/Moteur_RPG/">
+  <img src="EXEMPLES/CLAIRVAL/dist/assets/auvrenne-map.svg" width="640" alt="Miniature de la carte publique du site Auvrenne : royaume, Val d’Orne et lieux connus">
+</a>
 
-Carnet médiéval illustré, carte et fiches de personnages et d’équipement, journal des séances et sauvegarde directe depuis le chat avec le connecteur Supabase. Voir [les notes de version](RELEASE_NOTES.md) et [le protocole de sauvegarde Auvrenne](EXEMPLES/AUVRENNE/SAUVEGARDE_CHAT.md). Les notes précisent les limites de la synchronisation et du suivi des ressources.
+*Miniature cliquable de la carte du site Auvrenne. Les repères de ce fond initial représentent des connaissances de départ ; ils ne constituent pas des déplacements joués.*
 
-## Une campagne de trente jours
+## Le principe
 
-| Paramètre | Format retenu |
-| --- | --- |
-| Durée de l'histoire | 30 jours fictifs |
-| Calendrier visé | 30 jours réels de jeu |
-| Sessions | 60, à raison de deux par jour |
-| Durée d'une session | 10 à 15 minutes |
-| Temps quotidien | Environ 20 à 30 minutes |
-| En cas d'absence | Pause de l'histoire et décalage du calendrier réel |
-
-Les deux sessions d'une journée réelle couvrent ensemble une journée fictive. Le scénario prépare une progression jusqu'au dénouement et à l'épilogue, avec une échéance au jour 30. Les décisions restent ouvertes : une réussite rapide est conservée, les refus sont respectés et aucune scène n'est ajoutée pour remplir artificiellement la durée.
-
-Voir [le cadre de campagne](CAMPAGNE_30_JOURS.md).
-
-## Une boucle de jeu qui avance
+Le moteur accompagne un joueur et un maître du jeu, humain ou assistant. Le joueur exprime ses intentions ; le MJ présente les situations, résout les actions incertaines selon les règles convenues et fait évoluer le monde.
 
 **Intention → résolution → conséquences → réaction du monde → prochaine décision.**
 
-- Une démarche comprend les gestes et questions ordinaires nécessaires, sans validation à chaque étape.
-- Les preuves débouchent sur des actions et des issues concrètes, au lieu d'une chaîne d'interrogatoires.
-- Les missions aboutissent avec un bénéfice, un coût ou une conséquence perceptible.
-- Les PNJ poursuivent leurs objectifs selon les événements et le temps fictif.
-- Les choix de réponse sont numérotés, action libre comprise ; un numéro seul suffit pour répondre.
-- Le jeu alterne pression, exploration, relations et respiration, sans combat ni cliffhanger obligatoire.
+Le jeu se déroule dans la conversation. Le site permet de consulter le cadre public et la progression enregistrée. GitHub conserve le moteur, ses modèles et ses versions ; les sauvegardes personnelles et les secrets du MJ restent en dehors du dépôt public.
 
-Le mode narratif est disponible, ainsi qu'une option de dés à choisir explicitement avant usage. Voir [les règles](REGLES.md).
+## Nos principes de jeu
 
-## Créer l'univers et son identité visuelle
+- **Le joueur décide.** Le MJ ne choisit pas ses actions, son camp, ses dépenses ou ses engagements à sa place. Des choix numérotés facilitent les réponses ; une action libre reste possible.
+- **Une démarche avance vraiment.** Les gestes ordinaires et les questions prévisibles sont regroupés, sans demander une validation à chaque détail.
+- **Les conséquences persistent.** Une information obtenue, un objet consommé, une promesse ou une réussite ne sont pas annulés pour prolonger artificiellement l’histoire.
+- **Les missions peuvent aboutir.** Une solution efficace est reconnue. Combat, détour, enquête exhaustive et cliffhanger ne sont pas obligatoires.
+- **Le monde reste cohérent.** Géographie, moyens des acteurs et connaissances des personnages suivent les faits établis. Les PNJ agissent selon leurs objectifs et ce qu’ils peuvent savoir.
+- **Les dés servent l’incertitude.** La méthode et les risques sont convenus avant le jet. Aucun résultat aléatoire n’est inventé ; les actions ordinaires ne nécessitent pas de jet.
+- **Le temps suit le jeu.** Une absence réelle ne fait pas avancer l’histoire. La préparation nocturne produit des possibilités, jamais des événements déjà accomplis.
+- **Les secrets restent privés.** Seuls les faits publics autorisés et les découvertes effectives rejoignent le carnet du joueur.
 
-Le [questionnaire progressif](QUESTIONNAIRE_UNIVERS.md) définit l'univers une question à la fois : ambiance, échelle, magie ou technologie, société, pouvoirs, géographie, place du personnage, connaissances initiales et direction graphique.
+Voir [les règles](REGLES.md) et [les instructions du MJ](INSTRUCTIONS_MJ.md).
 
-Le [modèle d'univers](MODELES/UNIVERS.md) distingue les choix validés, le lore public et les éléments privés du MJ. Palette, typographies, symboles et illustrations sont adaptés à l'univers créé.
+## Jouer avec le chat et le site
 
-## Lore et carte sur le site
-
-La [spécification du site](SITE_LORE_ET_CARTE.md) prévoit :
-
-- Un lore consultable : présentation du monde, histoire connue, cultures, factions et glossaire.
-- Une carte stylisée avec zoom, déplacement, position actuelle, trajets et fiches de lieux.
-- Une découverte progressive au fil des déplacements accomplis et des informations réellement obtenues.
-- Une distinction entre lieux inconnus, connus de nom et visités.
-- Une géographie stable et des ressources publiques excluant les secrets du MJ.
-
-La version 1.3.0 a posé cette spécification. Le prototype Clairval implémente désormais la carte et l’import des déplacements publics ; l’adaptation à un autre univers, le zoom et la synchronisation automatique restent à réaliser.
-
-## Carnet personnel illustré
-
-La fiche du personnage prend la forme d'un carnet personnel : identité et portrait, état actuel, savoir-faire, possessions et engagements. Les pages comportent des annotations et des images stylisées selon l'univers, avec une continuité de visage, de tenue et d'objets. Le texte reste accessible indépendamment des illustrations.
-
-Voir [la spécification du carnet](CARNET_PERSONNAGE.md) et [le modèle public vierge](MODELES/CARNET_PERSONNAGE.md). Le prototype Clairval implémente la reprise, les missions, les possessions et l’état narratif ; l’identité complète et les savoir-faire restent à intégrer. Ses contenus de campagne suivent les faits publics importés.
-
-## PNJ et relations
-
-Une galerie de portraits ouvre les pages individuelles du carnet : identité connue, rencontres marquantes, relation observable, affaires en cours et dernière nouvelle. Les personnes seulement évoquées restent « connues de nom », sans portrait inventé. Les relations sont décrites par les faits, sans jauge de loyauté secrète.
-
-Voir [PNJ et relations](PNJ_ET_RELATIONS.md) et [le modèle public de PNJ](MODELES/PNJ_PUBLIC.md). La galerie illustrée existe dans la démonstration ; le mode campagne affiche les rencontres importées. Les fiches de relation dynamiques restent à intégrer.
-
-## Missions et continuité
-
-Les [missions du carnet](MISSIONS_ET_GUIDAGE.md) sont réparties entre En cours, Possibilités et Historique. Le guidage léger présente les faits et une suggestion discrète si nécessaire, sans dévoiler de solution. Un [modèle public](MODELES/MISSION_PUBLIQUE.md) décrit chaque mission.
-
-La [sauvegarde et la reprise](SAUVEGARDE_ET_REPRISE.md) prévoient un enregistrement automatique vérifié à la fin d'une session ou lors d'une interruption, avec état MJ privé, projection publique et résumé dans le carnet. Une réparation ne rejoue ni ne recompte les événements. **La sauvegarde privée complète et son déclenchement automatique restent à implémenter.** Le prototype implémente les pages de mission, la projection publique locale et son export / import manuel.
-
-## Construire un scénario adaptable
-
-Le [guide de construction](CONSTRUIRE_UNE_CAMPAGNE.md) organise :
-
-- Un conflit central, une échéance et plusieurs issues possibles.
-- Quatre à six personnages moteurs aux objectifs distincts.
-- Deux intrigues secondaires facultatives.
-- Des décisions dont les effets persistent dans les situations suivantes.
-- Une préparation détaillée des deux prochaines sessions, révisée après le jeu.
-- Un point de contrôle tous les cinq jours fictifs.
-
-Utiliser le [modèle de campagne](MODELES/CAMPAGNE.md) et le [modèle de situation](MODELES/SITUATION.md). L'exemple privé [Le passage des Hautes-Eaux](EXEMPLES/CAMPAGNE_TEST.md) présente cinq acteurs et deux sessions conditionnelles préparées. Il reste à jouer et ne fixe pas l'univers par défaut du moteur.
-
-## Création et reprise
-
-Le [parcours de campagne](PARCOURS_CAMPAGNE.md) distingue la maintenance du moteur, la création d'une nouvelle campagne et sa reprise. Chaque nouvelle campagne reçoit son questionnaire ; une reprise retrouve l'univers validé et les réponses existantes. La validation précède la préparation du scénario et du site. Le début du jeu reste une demande distincte.
-
-## Commencer
-
-1. Lire [les règles](REGLES.md) et [le démarrage](DEMARRER.md).
-2. Créer l'univers avec le [questionnaire](QUESTIONNAIRE_UNIVERS.md), en réutilisant les réponses déjà données.
-3. Valider le cadre et remplir les modèles d'univers et de campagne.
-4. Préparer les deux premières sessions avec le guide de construction.
-5. Pour un assistant, fournir les fichiers et copier [les instructions MJ](INSTRUCTIONS_MJ.md) dans le projet.
-6. Commencer la première session sur demande du joueur.
-
-Les modèles et notes d'exemple destinés au MJ restent privés. Seuls les contenus publics autorisés sont destinés au futur site.
-
-## Évolutions
-
-| Version | Évolution |
+| Étape | Fonctionnement |
 | --- | --- |
-| 1.9.0 | Connexion Supabase, sauvegardes par compte et synchronisation automatique entre appareils |
-| 1.8.0 | Carte explorable, campagne publique, missions, inventaire, état narratif et export / reprise |
-| 1.7.0 | Démonstration médiévale Clairval, interactions et distribution WebP allégée |
-| 1.6.0 | Missions à guidage léger et sauvegarde automatique : spécifications |
-| 1.5.0 | Galerie de PNJ et relations observables : spécification et modèle |
-| 1.4.0 | Carnet personnel illustré : spécification et modèle public |
-| 1.3.1 | Parcours réutilisable : questionnaire interrompu, validation et reprise |
-| 1.3.0 | Construction de campagne, univers, lore et spécification de carte progressive |
-| 1.2.0 | 60 sessions sur trente jours fictifs |
-| 1.1.0 | Démarches complètes, missions qui aboutissent et choix numérotés |
-| 1.0.0 | Première base propre du moteur narratif |
+| Créer | Le questionnaire définit l’univers, le personnage, le ton et les connaissances initiales. |
+| Valider | Le joueur valide le cadre avant la préparation et le lancement du jeu. |
+| Préparer | Le MJ prépare des acteurs, des lieux et des situations conditionnelles en privé. |
+| Jouer | Le joueur prend ses décisions dans un chat dédié à sa campagne. |
+| Sauvegarder | À la clôture d’une séance Auvrenne, le chat peut enregistrer directement le bilan public via le connecteur Supabase, puis relire le résultat. |
+| Consulter | Le site retrouve la progression à son ouverture ou au retour sur l’onglet, sauf conflit entre copies. |
+| Reprendre | Le MJ relit la sauvegarde et le contexte de jeu avant de poursuivre. |
 
-Voir [l'historique détaillé](CHANGELOG.md) et [la release 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0).
+**La sauvegarde depuis le chat exige le connecteur Supabase et le chargement du [protocole Auvrenne](EXEMPLES/AUVRENNE/SAUVEGARDE_CHAT.md).** Il n’existe pas d’observateur automatique de toutes les conversations. Une sauvegarde n’est annoncée réussie qu’après vérification. Sans accès, le bilan doit être conservé et la sauvegarde signalée non confirmée.
 
-## État de validation
-
-Un essai conversationnel court a permis d'améliorer le rythme. Les fichiers, les liens internes et le découpage des soixante sessions ont été contrôlés. Le nouveau scénario d'exemple et une campagne complète restent à éprouver en partie.
-
-Le dépôt contient le moteur générique, des modèles vierges et des exemples de préparation. Il ne contient aucune sauvegarde de partie, ancienne campagne ou donnée personnelle. La continuité entre conversations n'est pas automatique.
-
-## Site médiéval Clairval
-
-Carte sur parchemin, menus illustrés, portraits et fiches consultables : [ouvrir la documentation Clairval](EXEMPLES/CLAIRVAL/README.md).
-
-Depuis la version 1.8.0 : exploration depuis Vaucombe, découverte de sept lieux, chemins parcourus et progression conservée dans le navigateur. Le parcours libre et la campagne publique restent séparés.
-
-Le mode **Ma campagne** permet aussi d’importer une projection publique des déplacements confirmés et du résumé de reprise, avec contrôle des révisions. Il reste séparé du parcours libre, sans synchronisation automatique avec la conversation. Voir le [guide d’import](EXEMPLES/CLAIRVAL/MISE_A_JOUR_CAMPAGNE.md).
-
-Le format public 3 relie aussi les missions et l’[inventaire de campagne](EXEMPLES/CLAIRVAL/INVENTAIRE_CAMPAGNE.md) : réceptions, consommations, transferts, pertes et dépenses sont conservés sans double décompte entre les sessions. Ces fonctions sont incluses dans la version 1.8.0.
-
-Le format public 4 ajoute l’[état du personnage](EXEMPLES/CLAIRVAL/ETAT_PERSONNAGE.md) dans le carnet : blessures, fatigue et effets temporaires, avec conséquences narratives et récupérations confirmées. Aucun score ni rétablissement automatique n’est ajouté.
-
-L’[export et la reprise de progression](EXEMPLES/CLAIRVAL/EXPORT_ET_REPRISE.md) permettent de transférer la projection publique vers un autre navigateur : fichier JSON, aperçu avant intégration et retour au carnet. Cette fonction conserve le format existant et ne remplace pas la sauvegarde privée du MJ.
-
-## Sauvegarde automatique — Supabase
-
-L’édition en ligne propose une [synchronisation automatique par compte](EXEMPLES/CLAIRVAL/SAUVEGARDE_CLOUD.md) du parcours libre et de la projection publique de campagne. Les modifications locales sont envoyées et la copie en ligne est récupérée à l’ouverture ou au retour sur l’onglet. Une divergence suspend le transfert et demande de choisir la copie à conserver. Les commandes manuelles, l’export JSON et l’édition autonome restent disponibles.
+Sur le site, le statut de synchronisation reste visible. Les commandes manuelles se trouvent dans **Options de sauvegarde** ; le formulaire de séance est une solution de secours. Ne pas recopier une séance déjà enregistrée depuis le chat.
 
 ## Auvrenne — Le passage des vivants
 
-Le [carnet préparatoire d’Auvrenne](EXEMPLES/AUVRENNE/README.md) adapte le site au royaume et à Corbec Le Varn : charte chaude de bois et de parchemin, portrait, carte initiale, lore public et appel d’Alix. Aucun fait de partie n’est joué par la navigation. Les notes personnelles et repères favoris sont synchronisés séparément de Clairval. La démonstration Clairval reste accessible via `clairval.html`.
+Auvrenne est l’adaptation actuelle du carnet : un royaume médiéval réaliste sans magie, au printemps et en guerre. Le personnage préparé est **Corbec Le Varn**, mercenaire de 46 ans spécialisé en discrétion. Le cadre propose l’appel d’Alix de la Noue ; il n’engage pas le personnage à accepter sa mission.
+
+Le carnet comprend :
+
+- une présentation en bois sombre et parchemin doré, avec menus illustrés ;
+- les fiches de Corbec et d’Alix, ainsi que quatre fiches d’équipement ;
+- une carte à huit repères cliquables, avec zoom, défilement et noms sur cartouches ;
+- la distinction entre lieux connus et positions consignées ;
+- un journal public : séances, jour fictif, lieu de fin et état de la mission ;
+- des notes personnelles et repères favoris, séparés des sauvegardes Clairval.
+
+La navigation ne joue aucune scène et ne crée aucun déplacement. Le cadre de préparation ne remplace pas la sauvegarde actuelle du joueur.
+
+[Cadre public](EXEMPLES/AUVRENNE/CADRE_PUBLIC.md) · [Guide Auvrenne](EXEMPLES/AUVRENNE/README.md) · [Utiliser le carnet](EXEMPLES/CLAIRVAL/PARTIE_AUVRENNE.md)
+
+## Cadence adaptable
+
+Le cadre de référence propose **30 jours fictifs et 60 séances indicatives de 10 à 15 minutes**, soit deux courtes séances par jour de jeu. Ce rythme sert à préparer une progression, pas à imposer un quota de scènes ou une durée réelle fixe.
+
+Une réussite anticipée est conservée ; les absences mettent le jeu en pause. Un objectif atteint peut mener à un épilogue ou à une nouvelle proposition, selon les décisions du joueur.
+
+[Campagne de trente jours](CAMPAGNE_30_JOURS.md) · [Construire une campagne](CONSTRUIRE_UNE_CAMPAGNE.md)
+
+## État réel des fonctions
+
+| Fonction | État |
+| --- | --- |
+| Questionnaire, règles et modèles réutilisables | Disponibles dans le dépôt |
+| Carnet illustré, carte et fiches Auvrenne | Disponibles dans le site |
+| Journal Auvrenne et conservation des anciens carnets préparatoires | Implémentés et testés |
+| Synchronisation par compte et protection des conflits | Implémentées ; pas de fusion automatique |
+| Sauvegarde de séance depuis le chat | Fonction serveur et protocole disponibles ; accès du chat requis, première vraie séance à confirmer |
+| Inventaire chiffré et blessures structurées dans Auvrenne | Non implémentés ; à consigner dans les résumés |
+| État privé complet du MJ | À conserver séparément ; non pris en charge par la sauvegarde publique du carnet |
+
+La position structurée d’Auvrenne reste limitée aux huit lieux existants et au lieu de fin de séance. Les autres lieux visités et les ressources doivent être décrits dans le résumé. Le site ne se rafraîchit pas en continu ; les modifications simultanées peuvent nécessiter une résolution manuelle. La typographie gothique dépend des polices disponibles sur l’appareil.
+
+La [démonstration Clairval](https://delattreb.github.io/Moteur_RPG/clairval.html) reste distincte : parcours libre, import d’une projection publique, missions, inventaire, état narratif et export / reprise. Ses capacités ne sont pas toutes transposées à Auvrenne.
+
+## Commencer ou reprendre
+
+Pour une nouvelle campagne :
+
+1. Lire [Démarrer](DEMARRER.md) et [les règles](REGLES.md).
+2. Suivre le [questionnaire d’univers](QUESTIONNAIRE_UNIVERS.md), une question à la fois.
+3. Valider le cadre, puis utiliser les modèles et le [guide de construction](CONSTRUIRE_UNE_CAMPAGNE.md).
+4. Garder la préparation du MJ privée et créer un chat de jeu dédié.
+5. Lancer la première scène uniquement sur demande du joueur.
+
+Pour reprendre Auvrenne, charger le [cadre public](EXEMPLES/AUVRENNE/CADRE_PUBLIC.md), le [protocole de sauvegarde](EXEMPLES/AUVRENNE/SAUVEGARDE_CHAT.md) et la progression effective. Ne pas refaire le questionnaire ni réinitialiser une partie existante.
+
+## Documentation
+
+| Sujet | Ressources |
+| --- | --- |
+| Création et continuité | [Parcours de campagne](PARCOURS_CAMPAGNE.md), [sauvegarde et reprise](SAUVEGARDE_ET_REPRISE.md) |
+| Univers et scénario | [Questionnaire](QUESTIONNAIRE_UNIVERS.md), [construction](CONSTRUIRE_UNE_CAMPAGNE.md), [modèle d’univers](MODELES/UNIVERS.md), [modèle de campagne](MODELES/CAMPAGNE.md), [modèle de situation](MODELES/SITUATION.md) |
+| Carnet et personnages | [Carnet](CARNET_PERSONNAGE.md), [PNJ et relations](PNJ_ET_RELATIONS.md), [modèle de carnet](MODELES/CARNET_PERSONNAGE.md), [modèle de PNJ](MODELES/PNJ_PUBLIC.md) |
+| Missions et carte | [Missions et guidage](MISSIONS_ET_GUIDAGE.md), [modèle de mission](MODELES/MISSION_PUBLIQUE.md), [spécification du site](SITE_LORE_ET_CARTE.md) |
+| Démonstration Clairval | [Documentation](EXEMPLES/CLAIRVAL/README.md), [import](EXEMPLES/CLAIRVAL/MISE_A_JOUR_CAMPAGNE.md), [inventaire](EXEMPLES/CLAIRVAL/INVENTAIRE_CAMPAGNE.md), [état](EXEMPLES/CLAIRVAL/ETAT_PERSONNAGE.md), [export / reprise](EXEMPLES/CLAIRVAL/EXPORT_ET_REPRISE.md) |
+| Hébergement et connexion | [Mise en ligne](EXEMPLES/CLAIRVAL/MISE_EN_LIGNE.md), [authentification](EXEMPLES/CLAIRVAL/AUTH_SUPABASE.md), [sauvegarde cloud](EXEMPLES/CLAIRVAL/SAUVEGARDE_CLOUD.md) |
+
+Le code du site Auvrenne est actuellement rangé dans `EXEMPLES/CLAIRVAL/dist/`. Son cadre et son protocole se trouvent dans `EXEMPLES/AUVRENNE/`.
+
+## Versions
+
+| Version | Évolution |
+| --- | --- |
+| **1.10.0** | Auvrenne : carnet illustré, carte corrigée, journal et sauvegarde depuis le chat |
+| 1.9.0 | Connexion et synchronisation entre appareils |
+| 1.8.0 | Progression publique et export / reprise |
+| 1.7.0 | Démonstration médiévale et distribution WebP |
+| 1.6.0 | Missions et sauvegarde : spécifications |
+| 1.5.0 | PNJ et relations : spécification |
+| 1.4.0 | Carnet illustré : spécification |
+| 1.3.1 | Parcours de création et de reprise |
+| 1.3.0 | Univers, lore et construction de campagne |
+| 1.2.0 | Campagne de trente jours fictifs |
+| 1.1.0 | Rythme, démarches et choix numérotés |
+| 1.0.0 | Base du moteur narratif |
+
+[Historique détaillé](CHANGELOG.md) · [Toutes les releases](https://github.com/delattreb/Moteur_RPG/releases)
+
+## Vérification et confidentialité
+
+Les contrôles du carnet, des fiches, du journal, de la restauration et du placement des cartouches passent. La fonction de sauvegarde de séance a été testée en base avec des transactions annulées : les essais n’ont créé aucune séance dans la partie réelle.
+
+Une campagne complète, la première vraie sauvegarde depuis le chat de jeu et le rendu sur tous les appareils restent à éprouver. La [release 1.10.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.10.0) précise ces limites.
+
+Le dépôt public ne doit contenir ni sauvegarde personnelle, ni dossier privé du MJ, ni surprise de préparation. Les éventuelles tâches nocturnes constituent un travail de préparation distinct du jeu et du déploiement. La publication du site reste manuelle et ne sauvegarde pas une séance.
