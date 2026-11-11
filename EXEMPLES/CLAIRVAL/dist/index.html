@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2d1d12">
+<meta name="description" content="Les Chroniques de Clairval : un carnet de voyage médiéval, sa carte, ses personnages et ses quêtes.">
+<title>Les Chroniques de Clairval · Carnet de voyage</title>
+<link rel="stylesheet" href="clairval.css">
+<script src="clairval.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#content">Aller au carnet</a>
+<div class="scenery" id="scenery" aria-hidden="true"></div>
+<header class="masthead">
+ <a href="#carte" class="identity" aria-label="Les Chroniques de Clairval, carte du monde">
+  <span class="banner" aria-hidden="true">♜</span>
+  <span><h1>Les Chroniques de Clairval</h1><p>Carnet de voyage</p></span>
+ </a>
+ <div class="day">Jour 12 · Crépuscule</div>
+</header>
+<div class="layout">
+ <nav class="navigation wood-frame" id="navigation" aria-label="Rubriques du carnet"></nav>
+ <main id="content" tabindex="-1"><noscript><section class="content-page parchment"><h2>Bienvenue à Clairval</h2><p>Active JavaScript dans ton navigateur pour consulter la carte, les personnages et leurs fiches.</p></section></noscript></main>
+ <aside class="encounters wood-frame" id="encounters" aria-label="Personnages rencontrés et quête en cours"></aside>
+ <section class="besace wood-frame" id="besace" aria-label="Objets de votre inventaire"></section>
+</div>
+<footer class="footer"><span>Clairval · Un univers à découvrir, au fil de vos pas.</span><button data-info="site">À propos de cet exemple</button></footer>
+<dialog id="detail" aria-labelledby="detail-title"><button class="close" data-close aria-label="Fermer la fiche">×</button><div id="detail-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

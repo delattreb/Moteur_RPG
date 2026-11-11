@@ -45,3 +45,7 @@ Intégrer la galerie et les pages individuelles selon PNJ_ET_RELATIONS.md, avec 
 
 ## Missions et résumé de reprise
 Prévoir les pages de MISSIONS_ET_GUIDAGE.md et le résumé public défini dans SAUVEGARDE_ET_REPRISE.md. Le site ne reçoit jamais les sources MJ. La validité d'une sauvegarde et l'actualisation du site sont vérifiées séparément. Ces fonctions restent à implémenter.
+
+## Démonstration Clairval — 1.7.0
+
+[L’exemple Clairval](EXEMPLES/CLAIRVAL/README.md) implémente la présentation médiévale et les interactions statiques. Données fictives ; découverte progressive et synchronisation des sauvegardes restent à implémenter.

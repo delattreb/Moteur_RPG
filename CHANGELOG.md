@@ -3,6 +3,15 @@
 ## À venir
 Les évolutions seront décrites ici avant leur prochaine version.
 
+## 1.7.0 - 11 novembre 2026
+- Distribution allégée : illustration WebP de 358 Ko ; PNG source et HTML autonome exclus du dépôt.
+- Ajout de la démonstration médiévale Clairval validée : carte peinte, menus illustrés et portraits de Ysilde, Garin et Perrin.
+- Six rubriques, sept lieux, quatre objets, recherche de personnages et filtres de quêtes.
+- Livraison des sources, de l'illustration WebP et des scripts ; HTML autonome généré localement.
+- Documentation mise à jour ; sauvegarde de campagne et découverte automatique de la carte restent à implémenter.
+
+Validation : contrôles automatisés Clairval réussis. Mise à jour de main sans nouvelle release GitHub.
+
 ## 1.6.0 — 11 novembre 2026
 - Missions réparties entre En cours, Possibilités et Historique, avec modèle public vierge.
 - Guidage léger : faits connus et suggestion discrète si nécessaire, sans solution révélée.

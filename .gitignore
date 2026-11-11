@@ -9,3 +9,7 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Artefacts generes et image source lourde
+EXEMPLES/CLAIRVAL/Clairval-site-medieval.html
+EXEMPLES/CLAIRVAL/dist/assets/medieval-art.png
