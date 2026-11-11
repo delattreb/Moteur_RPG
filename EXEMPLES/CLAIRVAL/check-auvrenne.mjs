@@ -36,12 +36,26 @@ window.location.hash='#carte';handlers['window:hashchange']();click({place:'orda
 click({favorite:'ordan'});assert.ok(p.snapshot().bookmarks.includes('ordan'));assert.equal(p.snapshot().journey.length,0);assert.equal(p.snapshot().campaign,null);
 for(const name of ['auvrenne-data.mjs','auvrenne-app.mjs']){const text=fs.readFileSync(new URL('./dist/'+name,import.meta.url),'utf8');for(const secret of ['notesPriveesMJ','privateCampaign','initiativesSecretes'])assert.ok(!text.includes(secret));}
 const html=fs.readFileSync(new URL('./dist/index.html',import.meta.url),'utf8');
-assert.match(html,/Auvrenne/);assert.match(html,/PARTIE NON COMMENCÉE/);assert.match(html,/clairval.html/);
-console.log('Auvrenne : pages, notes échappées, favoris, état avant partie, isolation locale/cloud, restauration automatique et absence de secrets vérifiés.');
+assert.match(html,/Auvrenne/);assert.match(html,/PARTIE NON COMMENC�E/);assert.match(html,/clairval.html/);
+console.log('Auvrenne : pages, notes �chapp�es, favoris, �tat avant partie, isolation locale/cloud, restauration automatique et absence de secrets v�rifi�s.');
 
 window.location.hash='#inventaire';handlers['window:hashchange']();
-for(const id of ['dagger','bow','mule','pack']){assert.match(node('#content').innerHTML,new RegExp('data-object="'+id+'"'));click({object:id});assert.equal(node('#detail').open,true);assert.match(node('#detail-body').innerHTML,/Objets & équipement/);}
-for(const id of ['corbec','alix']){click({person:id});assert.match(node('#detail-body').innerHTML,/Portrait illustré/);}
+for(const id of ['dagger','bow','mule','pack']){assert.match(node('#content').innerHTML,new RegExp('data-object="'+id+'"'));click({object:id});assert.equal(node('#detail').open,true);assert.match(node('#detail-body').innerHTML,/Objets & �quipement/);}
+for(const id of ['corbec','alix']){click({person:id});assert.match(node('#detail-body').innerHTML,/Portrait illustr�/);}
 assert.equal(p.snapshot().journey.length,0);assert.equal(p.snapshot().campaign,null);
 assert.match(node('#besace').innerHTML,/Votre besace/);assert.match(node('#encounters').innerHTML,/Alix de la Noue/);
-console.log('Présentation chaude : fiches de deux personnages, quatre objets et besace illustrée vérifiées, sans modification de la campagne.');
+console.log('Pr�sentation chaude : fiches de deux personnages, quatre objets et besace illustr�e v�rifi�es, sans modification de la campagne.');
+
+window.location.hash='#carte';handlers['window:hashchange']();
+const mapHtml=node('#content').innerHTML;
+assert.equal((mapHtml.match(/class="atlas-marker"/g)||[]).length,8);
+assert.match(mapHtml,/class="atlas-sheet" style="width:100%"/);
+for(const id of ['valcroix','lande','ormeval','pont','gue','ordan','rochebrune','mareuil']){
+ assert.match(mapHtml,new RegExp('class="atlas-marker" data-place="'+id+'"'));
+ click({place:id});assert.equal(node('#detail').open,true);
+ assert.ok(node('#detail-body').innerHTML.includes('detail-title'));
+}
+click({zoom:'25'});assert.equal(node('#world-map').style.width,'125%');
+assert.equal(p.snapshot().journey.length,0);assert.equal(p.snapshot().campaign,null);
+console.log('Carte : huit rep�res ouvrent leurs fiches ; zoom partag� avec le fond ; aucun d�placement cr��.');
+
