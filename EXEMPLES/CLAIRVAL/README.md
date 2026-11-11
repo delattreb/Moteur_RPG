@@ -32,3 +32,7 @@ L’**inventaire de campagne** utilise le format 3 : quantités calculées depui
 L’**état du personnage** apparaît dans le carnet au format 4 : blessures, fatigue et effets temporaires, conséquences concrètes et récupération confirmée, sans jauges. Le journal est conservé ; aucun état n’évolue automatiquement pendant une absence. Les formats précédents restent lisibles. Voir le [guide de l’état du personnage](ETAT_PERSONNAGE.md).
 
 L’**export et la reprise** permettent de télécharger cette progression publique en JSON et de la restaurer dans un autre navigateur. L’aperçu précède l’intégration ; le carnet retrouve ensuite la dernière décision en attente. Voir le [guide d’export et de reprise](EXPORT_ET_REPRISE.md). Le fichier ne remplace pas la sauvegarde privée complète du MJ.
+
+## Connexion du site en ligne
+
+Le site `dist/index.html` utilise désormais Supabase Auth avant l’ouverture du carnet. Voir [la configuration et les limites de protection](AUTH_SUPABASE.md). Les sauvegardes restent locales. L’export HTML autonome reste une démonstration hors ligne sans authentification.

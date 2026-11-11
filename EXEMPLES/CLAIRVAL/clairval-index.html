@@ -7,9 +7,24 @@
 <meta name="description" content="Les Chroniques de Clairval : un carnet de voyage médiéval, sa carte, ses personnages et ses quêtes.">
 <title>Les Chroniques de Clairval · Carnet de voyage</title>
 <link rel="stylesheet" href="clairval.css">
-<script src="clairval.js" defer></script>
+<script type="module" src="auth.mjs"></script>
 </head>
 <body>
+<!-- AUTH_START -->
+<style>[hidden]{display:none!important}#auth-panel{max-width:520px;margin:8vh auto;padding:28px}#auth-form{display:grid;gap:12px}#auth-form input{width:100%;box-sizing:border-box;padding:12px}#auth-panel button{padding:12px}#auth-status{min-height:3em}#account-bar{display:flex;gap:16px;align-items:center;justify-content:flex-end;padding:12px}</style>
+<section id="auth-panel" class="parchment" aria-labelledby="auth-title">
+<h1 id="auth-title">Les Chroniques de Clairval</h1><p>Connectez-vous pour ouvrir votre carnet.</p>
+<form id="auth-form">
+<label for="auth-email">E-mail</label><input id="auth-email" name="email" type="email" autocomplete="username" required maxlength="254">
+<label for="auth-password">Mot de passe</label><input id="auth-password" name="password" type="password" autocomplete="current-password" required minlength="12" maxlength="128">
+<button class="gold-button" type="submit" value="login">Se connecter</button>
+<button type="submit" value="signup">Créer mon compte</button>
+</form><p>Pour un nouveau compte : au moins 12 caractères. Confirmez ensuite votre adresse par e-mail.</p>
+<p id="auth-status" role="status" aria-live="polite">Chargement de la connexion…</p><button id="auth-retry" type="button">Réessayer</button>
+<noscript>Activez JavaScript pour vous connecter.</noscript></section>
+<!-- AUTH_END -->
+<div id="clairval-app" hidden>
+<div id="account-bar"><span id="account-email"></span><button id="auth-logout" type="button">Se déconnecter</button></div>
 <a class="skip" href="#content">Aller au carnet</a>
 <div class="scenery" id="scenery" aria-hidden="true"></div>
 <header class="masthead">
@@ -28,5 +43,6 @@
 <footer class="footer"><span>Clairval · Un univers à découvrir, au fil de vos pas.</span><button data-info="site">À propos de cet exemple</button></footer>
 <dialog id="detail" aria-labelledby="detail-title"><button class="close" data-close aria-label="Fermer la fiche">×</button><div id="detail-body"></div></dialog>
 <div id="toast" role="status" aria-live="polite"></div>
+</div>
 </body>
 </html>
