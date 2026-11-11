@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {initialState,validateState,createProgress} from './dist/auvrenne-state.mjs';
+import {prepareCampaign,recordSession} from './dist/auvrenne-campaign.mjs';
 import {createJournal} from './dist/auvrenne-app.mjs';
 import {createCloudStore} from './dist/cloud-sync.mjs';
 import {createAutoSync} from './dist/autosave-core.mjs';
@@ -51,11 +52,65 @@ const mapHtml=node('#content').innerHTML;
 assert.equal((mapHtml.match(/class="atlas-marker"/g)||[]).length,8);
 assert.match(mapHtml,/class="atlas-sheet" style="width:100%"/);
 for(const id of ['valcroix','lande','ormeval','pont','gue','ordan','rochebrune','mareuil']){
- assert.match(mapHtml,new RegExp('class="atlas-marker" data-place="'+id+'"'));
+ assert.match(mapHtml,new RegExp('class="atlas-marker"[^>]*data-place="'+id+'"'));
  click({place:id});assert.equal(node('#detail').open,true);
  assert.ok(node('#detail-body').innerHTML.includes('detail-title'));
 }
 click({zoom:'25'});assert.equal(node('#world-map').style.width,'125%');
 assert.equal(p.snapshot().journey.length,0);assert.equal(p.snapshot().campaign,null);
 console.log('Carte : huit repères ouvrent leurs fiches ; zoom partagé avec le fond ; aucun déplacement créé.');
+
+// Existing v1 preparatory saves migrate without losing personal content.
+const old={version:1,world:'auvrenne',campaign:null,journey:[],notes:'Anciennes notes',bookmarks:['ordan']};
+assert.equal(validateState(old).version,2);assert.equal(old.version,1);
+const prepared=prepareCampaign(old);
+assert.deepEqual(prepared.journey,['valcroix']);assert.equal(prepared.campaign.sessions,0);
+assert.equal(prepared.notes,old.notes);assert.deepEqual(prepared.bookmarks,old.bookmarks);
+assert.deepEqual(prepareCampaign(prepared),prepared);assert.equal(a.isEmpty(prepared),false);
+let played=recordSession(prepared,{day:1,place:'valcroix',summary:'Lecture du message.',mission:'proposed'});
+played=recordSession(played,{day:2,place:'ormeval',summary:'<img src=x onerror=alert(1)>',mission:'accepted'});
+assert.equal(played.campaign.sessions,2);assert.deepEqual(played.journey,['valcroix','ormeval']);
+assert.deepEqual(validateState(JSON.parse(JSON.stringify(played))),played);
+assert.equal(prepared.campaign.sessions,0);assert.equal(prepared.campaign.log.length,0);
+for(const entry of [
+ {day:0,place:'valcroix',summary:'Texte',mission:'proposed'},
+ {day:1,place:'secret',summary:'Texte',mission:'proposed'},
+ {day:1,place:'valcroix',summary:' ',mission:'proposed'},
+ {day:1,place:'valcroix',summary:'Texte',mission:'completed'},
+ {day:1,place:'valcroix',summary:'x'.repeat(4001),mission:'proposed'}
+])assert.throws(()=>recordSession(prepared,entry));
+assert.throws(()=>recordSession(played,{day:1,place:'ordan',summary:'Retour dans le temps',mission:'accepted'}));
+assert.throws(()=>validateState({...played,journey:['valcroix','ordan']}));
+assert.throws(()=>validateState({...played,campaign:{...played.campaign,privateNotes:'secret'}}));
+assert.throws(()=>validateState({...played,campaign:{...played.campaign,sessions:99}}));
+
+// A freshly opened device restores a started game instead of overwriting it.
+let restored=initialState();
+const activeAuto=createAutoSync({store:{owner:async()=>{},read:async()=>({payload:played,version:3}),write:async()=>{throw Error('Unexpected overwrite');}},progress:{snapshot:()=>structuredClone(restored),validate:validateState,apply:v=>restored=validateState(v),isEmpty:a.isEmpty},cache:{read:()=>null,write(){}},notify(){}});
+await activeAuto.sync();assert.deepEqual(restored,played);assert.equal(activeAuto.isPaused(),false);
+
+// Initializing through the UI does not manufacture a played session.
+handlers.click({target:{closest:()=>({dataset:{},hasAttribute:name=>name==='data-prepare'})}});
+assert.equal(p.snapshot().campaign.sessions,0);assert.equal(p.snapshot().notes,'Question pour Alix');
+assert.ok(p.snapshot().bookmarks.includes('ordan'));
+const beforeClick=JSON.stringify(p.snapshot());click({place:'ordan'});assert.equal(JSON.stringify(p.snapshot()),beforeClick);
+for(const [id,value] of Object.entries({'#session-day':'2','#session-place':'ormeval','#session-summary':'<img src=x onerror=alert(1)>','#session-mission':'accepted'}))node(id).value=value;
+let prevented=false;handlers.submit({target:{id:'session-form'},preventDefault(){prevented=true;}});
+assert.equal(prevented,true);assert.equal(p.snapshot().campaign.sessions,1);
+assert.deepEqual(p.snapshot().journey,['valcroix','ormeval']);
+window.location.hash='#carnet';handlers['window:hashchange']();
+assert.ok(!node('#content').innerHTML.includes('<img src=x'));
+assert.match(node('#content').innerHTML,/&lt;img/);
+assert.match(node('.day').textContent,/Jour 2/);
+window.location.hash='#carte';handlers['window:hashchange']();
+assert.match(node('#content').innerHTML,/data-visited="true" data-current="true" data-place="ormeval"/);
+click({place:'ormeval'});assert.match(node('#detail-body').innerHTML,/Observations consignées/);
+assert.ok(!node('#detail-body').innerHTML.includes('<img src=x'));
+const preserved=JSON.stringify(p.snapshot());
+node('#session-day').value='1';handlers.submit({target:{id:'session-form'},preventDefault(){}});
+assert.equal(JSON.stringify(p.snapshot()),preserved);assert.ok(node('#session-status').textContent);
+fail=true;assert.throws(()=>p.update(prepared));fail=false;assert.equal(JSON.stringify(p.snapshot()),preserved);
+assert.deepEqual(createProgress({storage,userId:'a'}).snapshot(),p.snapshot());
+assert.equal(createProgress({storage,userId:'b'}).snapshot().campaign,null);
+console.log('Partie : migration v1, initialisation sans scène, séances, lieux, état mission, HTML échappé, erreurs sans perte, restauration et isolation vérifiés.');
 

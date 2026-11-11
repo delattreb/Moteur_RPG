@@ -9,7 +9,7 @@
 <text x="68.0" y="113.4" fill="#EBD1A0" font-size="60" font-family="Georgia,serif" font-weight="normal">AUVRENNE</text>
 <text x="70.0" y="154.5" fill="#EBD1A0" font-size="25" font-family="Arial,sans-serif" font-weight="normal">Le passage des vivants · Carnet de Corbec Le Varn</text>
 <text x="1280.0" y="98.6" fill="#EBD1A0" font-size="23" font-family="Arial,sans-serif" font-weight="bold">PRINTEMPS</text>
-<text x="1280.0" y="132.0" fill="#B9955B" font-size="17" font-family="Arial,sans-serif" font-weight="normal">Avant la première scène</text>
+<text x="1280.0" y="132.0" fill="#B9955B" font-size="17" font-family="Arial,sans-serif" font-weight="normal">Repères de mémoire</text>
 <rect x="42" y="212" width="325" height="688" fill="none" stroke="#B9955B" stroke-width="1"/>
 <text x="64.0" y="257.3" fill="#49301B" font-size="29" font-family="Georgia,serif" font-weight="normal">Le royaume</text>
 <polygon points="174,298 227,310 248,350 301,386 286,442 318,488 300,545 311,597 279,639 286,692 229,740 166,732 138,700 103,684 118,633 87,601 97,555 76,520 106,478 101,419 138,384 128,335" fill="#DEC28C" stroke="#886238" stroke-width="3"/>
@@ -101,6 +101,6 @@
 <text x="609.0" y="994.8" fill="#49301B" font-size="20" font-family="Arial,sans-serif" font-weight="normal">Lieu connu de nom</text>
 <circle cx="1008" cy="989" r="11" fill="#EBD1A0" stroke="#352316" stroke-width="3"/>
 <circle cx="1008" cy="989" r="4" fill="#352316" stroke="#49301B" stroke-width="2"/>
-<text x="1034.0" y="994.8" fill="#49301B" font-size="20" font-family="Arial,sans-serif" font-weight="normal">Départ proposé, non joué</text>
-<text x="64.0" y="1048.9" fill="#886238" font-size="19" font-family="Arial,sans-serif" font-weight="normal">Carte illustrée, géographie schématique : les distances du carnet font foi. Aucun trajet de cette campagne n'a encore été accompli.</text>
+<text x="1034.0" y="994.8" fill="#49301B" font-size="20" font-family="Arial,sans-serif" font-weight="normal">Départ initial : Valcroix</text>
+<text x="64.0" y="1048.9" fill="#886238" font-size="19" font-family="Arial,sans-serif" font-weight="normal">Fond initial : les distances du carnet font foi. Les repères interactifs indiquent la progression consignée.</text>
 </svg>

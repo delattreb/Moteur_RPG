@@ -4,6 +4,12 @@ Versions du dépôt, classées de la plus récente à la plus ancienne. Les vers
 
 ## À venir
 
+- Journal de partie Auvrenne : départ initialisé à Valcroix, séances publiques, jour fictif, position consignée et état de la mission.
+- Carte : distinction entre repères connus, positions consignées et position actuelle ; observations publiques accessibles dans les fiches.
+- Lecture des anciens carnets version 1 avec conservation des notes et favoris ; sauvegarde version 2, restauration et validation testées.
+- Ressources chiffrées non définies : argent, flèches, provisions et blessures restent à suivre dans les résumés. Aucune scène créée automatiquement.
+
+
 - Charte d’Auvrenne restaurée dans le style chaud de la version précédente : bois, parchemin, menus illustrés, portraits et fiches de personnages.
 - Retour de la besace, de l’inventaire et de quatre fiches d’équipement, sans modifier le scénario ni les sauvegardes.
 
