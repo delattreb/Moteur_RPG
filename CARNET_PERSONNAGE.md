@@ -43,3 +43,6 @@ Filtrer les contenus avant envoi au navigateur, y compris noms de fichiers, lég
 6. Consultation sans effet sur les compteurs ou le temps fictif.
 
 Ces contrôles restent à effectuer sur un site construit. Aucun système de progression chiffré ni nombre de compétences n'est ajouté par cette spécification.
+
+## Répertoire des rencontres
+La galerie de portraits ouvre les pages individuelles définies dans PNJ_ET_RELATIONS.md. Les affaires communes renvoient aux engagements connus du personnage. Utiliser MODELES/PNJ_PUBLIC.md pour les pages publiques, sans divulguer les fiches privées des acteurs.

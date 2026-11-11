@@ -1,6 +1,6 @@
 # Moteur RPG
 
-**Version du dépôt : 1.4.0** — [Première release : 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0)
+**Version du dépôt : 1.5.0** — [Première release : 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0)
 
 Moteur de jeu de rôle narratif pour un joueur et un maître du jeu humain ou assistant. Il fournit les règles et les modèles pour créer un univers, préparer une campagne et faire évoluer l'histoire selon les décisions du joueur. Cette édition est un référentiel utilisable en conversation ; elle ne contient pas encore d'application exécutable.
 
@@ -56,6 +56,12 @@ La fiche du personnage prend la forme d'un carnet personnel : identité et portr
 
 Voir [la spécification du carnet](CARNET_PERSONNAGE.md) et [le modèle public vierge](MODELES/CARNET_PERSONNAGE.md). Comme le site de lore et l'atlas, ce carnet reste à implémenter ; ses contenus suivent uniquement les faits joués et connus.
 
+## PNJ et relations
+
+Une galerie de portraits ouvre les pages individuelles du carnet : identité connue, rencontres marquantes, relation observable, affaires en cours et dernière nouvelle. Les personnes seulement évoquées restent « connues de nom », sans portrait inventé. Les relations sont décrites par les faits, sans jauge de loyauté secrète.
+
+Voir [PNJ et relations](PNJ_ET_RELATIONS.md) et [le modèle public de PNJ](MODELES/PNJ_PUBLIC.md). La galerie reste à implémenter avec le site.
+
 ## Construire un scénario adaptable
 
 Le [guide de construction](CONSTRUIRE_UNE_CAMPAGNE.md) organise :
@@ -91,6 +97,7 @@ Les modèles et notes d'exemple destinés au MJ restent privés. Seuls les conte
 | 1.0.0 | Première base propre : intentions, conséquences, monde actif et modèles de jeu |
 | 1.1.0 | Démarches complètes, missions qui aboutissent et choix numérotés |
 | 1.2.0 | Campagne de 60 sessions de 10 à 15 minutes sur trente jours fictifs |
+| 1.5.0 | Galerie de PNJ, pages de carnet et relations observables : spécification et modèle public |
 | 1.4.0 | Carnet personnel illustré adapté à l'univers : spécification et modèle public |
 | 1.3.1 | Parcours réutilisable : nouvelle campagne, questionnaire interrompu, validation et reprise |
 | 1.3.0 | Construction de campagne, questionnaire d'univers, lore et spécification de carte progressive |

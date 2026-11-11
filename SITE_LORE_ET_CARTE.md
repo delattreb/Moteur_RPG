@@ -39,3 +39,6 @@ Ces critères seront vérifiés sur le site construit ; leur présence dans le r
 
 ## Carnet du personnage
 Le site comprend aussi le carnet personnel illustré défini dans CARNET_PERSONNAGE.md : identité, état, savoir-faire, possessions et engagements. Utiliser MODELES/CARNET_PERSONNAGE.md comme modèle public. Le carnet, le lore et la carte partagent la même direction graphique ; leur consultation n'avance pas la fiction. Cette intégration reste à implémenter.
+
+## Galerie de PNJ et relations
+Intégrer la galerie et les pages individuelles selon PNJ_ET_RELATIONS.md, avec MODELES/PNJ_PUBLIC.md. Les personnes rencontrées sont illustrées selon les références connues ; les personnes seulement évoquées portent le statut « connue de nom ». Les relations et dernières nouvelles restent observables, sans position actuelle ni loyauté omnisciente. Cette intégration reste à implémenter.

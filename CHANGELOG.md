@@ -3,6 +3,15 @@
 ## À venir
 Les évolutions seront décrites ici avant leur prochaine version.
 
+## 1.5.0 — 11 novembre 2026
+- Présentation validée : galerie de portraits ouvrant les pages individuelles du carnet.
+- Identité connue, rencontres, relation observable, affaires en cours et dernière nouvelle.
+- Personnes seulement évoquées distinguées comme connues de nom, sans portrait inventé.
+- Relations décrites par leurs causes, sans jauge chiffrée ni révélation de loyauté secrète.
+- Modèle public vierge, continuité visuelle et cohérence avec les engagements du personnage.
+
+Validation documentaire : liens et références vérifiés. Galerie et pages non encore implémentées. Le suivi des missions n'est pas inclus ; aucune nouvelle release GitHub créée.
+
 ## 1.4.0 — 11 novembre 2026
 - Carnet personnel illustré retenu pour la fiche du personnage sur le site.
 - Cinq rubriques : identité, état, savoir-faire, possessions et engagements.
