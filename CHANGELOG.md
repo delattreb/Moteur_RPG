@@ -3,6 +3,15 @@
 ## À venir
 Les évolutions seront décrites ici avant leur prochaine version.
 
+## 1.3.1 — 11 novembre 2026
+- Parcours explicite séparant maintenance du moteur, nouvelle campagne et reprise.
+- Questionnaire propre à chaque nouvelle campagne ; reprise des réponses accessibles sans répétition.
+- Validation du cadre avant préparation du scénario et du site ; début de partie demandé séparément.
+- Changement de mode Chat/Work sans effet sur la campagne.
+- Tableau de contrôle des parcours, sans ajout de sauvegarde ni d'application.
+
+Validation documentaire des liens et cohérence des consignes. La release 1.3.0 reste inchangée ; cette correction est publiée sur main.
+
 ## 1.3.0 — 11 novembre 2026
 - Questionnaire progressif de création d'univers, modèle de lore et direction graphique adaptée.
 - Spécification du site : lore public consultable et carte stylisée découverte par les déplacements ; géographie privée exclue des ressources publiques.

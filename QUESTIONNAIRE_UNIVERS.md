@@ -2,6 +2,9 @@
 
 Poser une question à la fois avec des réponses numérotées et une option libre. Accepter les mélanges et la délégation au MJ. Une réponse précise peut résoudre plusieurs questions ; ne pas les reposer. Distinguer choix validé et proposition. Le questionnaire crée le cadre, pas des événements joués.
 
+## Quand le proposer
+Appliquer PARCOURS_CAMPAGNE.md. Proposer ce questionnaire à chaque nouvelle campagne explicitement demandée, jamais automatiquement pendant la maintenance du moteur. Pour une campagne existante ou un questionnaire interrompu, réutiliser les réponses accessibles et demander seulement ce qui manque. Les réponses appartiennent à cette campagne ; aucun univers précédent n'est importé par défaut. La validation du cadre précède la préparation du scénario et du site, puis le joueur demande séparément de commencer.
+
 ## Parcours progressif
 1. **Famille d'univers** : 1. Historique ou réaliste ; 2. Fantasy ; 3. Science-fiction ; 4. Autre ou mélange.
 2. **Échelle de départ** : 1. Ville et environs ; 2. Région et voyage ; 3. Plusieurs territoires ; 4. Autre. Adapter les distances aux trente jours fictifs.

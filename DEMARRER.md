@@ -1,5 +1,7 @@
 # Démarrer une partie
 
+Commencer par PARCOURS_CAMPAGNE.md : distinguer maintenance du moteur, nouvelle campagne et reprise. Une demande de poursuivre la conception ne lance pas une création d'univers. Sur une reprise, retrouver le cadre existant et la décision en attente ; les étapes de création ci-dessous concernent une nouvelle campagne.
+
 Poser quelques questions progressives, proposer des choix et accepter que le joueur délègue la création. Ne pas exiger un long formulaire avant de jouer.
 
 1. Univers et ambiance : type de monde, ton et place du fantastique.
