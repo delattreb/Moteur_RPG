@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101d35">
+<meta name="description" content="Auvrenne — Le passage des vivants. Le carnet de Corbec Le Varn, mercenaire dans un royaume en guerre.">
+<title>Auvrenne · Le passage des vivants</title>
+<link rel="stylesheet" href="auvrenne.css?v=1">
+<script type="module" src="auvrenne-auth.mjs?v=1"></script>
+</head><body>
+<a class="skip" href="#content">Aller au carnet</a>
+<section id="auth-panel" aria-labelledby="auth-title">
+<p class="eyebrow">Le carnet de Corbec Le Varn</p><h1 id="auth-title">Auvrenne</h1><p>Le passage des vivants</p>
+<form id="auth-form">
+<label for="auth-email">E-mail</label><input id="auth-email" name="email" type="email" autocomplete="username" required maxlength="254">
+<label for="auth-password">Mot de passe</label><input id="auth-password" name="password" type="password" autocomplete="current-password" required minlength="12" maxlength="128">
+<button type="submit" value="login">Se connecter</button><button class="secondary" type="submit" value="signup">Créer mon compte</button>
+</form>
+<small>Utilise ton compte Clairval existant. Pour un nouveau compte : au moins 12 caractères, puis confirmation de l’adresse par e-mail.</small>
+<p id="auth-status" role="status" aria-live="polite">Vérification de la connexion…</p><button class="secondary" id="auth-retry" type="button">Réessayer</button>
+<noscript><p>Active JavaScript pour ouvrir ton carnet.</p></noscript>
+</section>
+<div id="clairval-app" hidden>
+<div class="topline"><a class="seal" href="#carnet">AUVRENNE</a><div id="account-bar" class="account"><span id="account-email"></span><button id="auth-logout" type="button">Se déconnecter</button></div></div>
+<div class="book">
+<header class="masthead"><div class="brand">Le passage des vivants<small>Carnet de terrain · Corbec Le Varn</small></div><div class="folio">PRINTEMPS<br>PARTIE NON COMMENCÉE</div></header>
+<nav class="navigation" id="navigation" aria-label="Pages du carnet"></nav>
+<main id="content" tabindex="-1"></main>
+<section class="sync-panel" aria-label="Sauvegarde du carnet"><div class="sync-head"><span class="sync-dot" aria-hidden="true"></span><span class="sync-title">Sauvegarde automatique · Auvrenne</span></div><p id="cloud-status" role="status" aria-live="polite">Chargement de la sauvegarde…</p><div class="sync-actions"><button id="cloud-save" type="button">Sauvegarder en ligne</button><button id="cloud-load" type="button" class="secondary">Récupérer ma sauvegarde</button><button id="cloud-legacy" hidden type="button">Récupérer mon ancien carnet local</button></div></section>
+</div>
+<footer class="footer"><span>Un royaume en guerre. Une dette de vie. Aucun chemin encore parcouru.</span><a href="clairval.html">Retrouver la démonstration Clairval</a></footer>
+<dialog id="detail" aria-labelledby="detail-title"><button class="close" data-close type="button" aria-label="Fermer la fiche">×</button><div id="detail-body"></div></dialog>
+</div></body></html>

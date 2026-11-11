@@ -4,7 +4,8 @@ import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const dist=path.join(root,'dist');
-fs.copyFileSync(path.join(root,'clairval-index.html'),path.join(dist,'index.html'));
+fs.copyFileSync(path.join(root,'clairval-index.html'),path.join(dist,'clairval.html'));
+fs.copyFileSync(path.join(root,'auvrenne-index.html'),path.join(dist,'index.html'));
 // L'export autonome reste une démonstration publique hors ligne, sans Auth.
 const html=fs.readFileSync(path.join(root,'clairval-offline-index.html'),'utf8');
 const css=fs.readFileSync(path.join(dist,'clairval.css'),'utf8');

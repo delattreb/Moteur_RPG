@@ -4,7 +4,9 @@ Versions du dépôt, classées de la plus récente à la plus ancienne. Les vers
 
 ## À venir
 
-Aucune évolution supplémentaire annoncée.
+- Adaptation préparatoire à Auvrenne : carnet bleu nuit et ivoire, portrait de Corbec, carte initiale, lore et appel d’Alix.
+- Notes et repères favoris synchronisés dans un espace de sauvegarde distinct ; la démonstration Clairval et sa sauvegarde sont conservées.
+- Aucune scène, mission acceptée ou déplacement joué créé par cette adaptation. Pas de nouvelle release pour cette étape.
 
 ## 1.9.0 — 11 novembre 2026
 

@@ -1,0 +1,12 @@
+export const places=[
+ {id:'valcroix',name:'Valcroix',kind:'Départ prévu',note:'Lieu de repos après une mission payée. La première scène n’a pas encore établi la position de Corbec.',unknown:'La situation précise au moment de l’ouverture reste à découvrir.'},
+ {id:'lande',name:'Relais de la Lande',kind:'Souvenir de route',note:'Un ancien repère sur la route entre Valcroix et Ormeval.',unknown:'Les occupants et services actuels ne sont pas connus.'},
+ {id:'ormeval',name:'Ormeval',kind:'Souvenir ancien',note:'Le village où Alix avait caché et soigné Corbec pendant une occupation.',unknown:'Le groupe exact, les préparatifs et l’état actuel du village restent à constater.'},
+ {id:'pont',name:'Pont-de-Rive',kind:'Ancien passage connu',note:'Un passage repéré pendant une ancienne campagne militaire.',unknown:'Contrôle, péage et état actuel du pont ne sont pas établis.'},
+ {id:'gue',name:'Haut-Gué',kind:'Ancien repère',note:'Corbec connaît l’emplacement de ce passage secondaire.',unknown:'La profondeur et la praticabilité après les pluies restent à vérifier.'},
+ {id:'ordan',name:'Saint-Ordan',kind:'Connu de nom',note:'Un monastère qui accueille des blessés des deux camps. Alix espère y conduire ses patients et des familles.',unknown:'Les places, les réserves et les conditions réelles d’accueil ne sont pas connues.'},
+ {id:'rochebrune',name:'Rochebrune',kind:'Connu de nom',note:'Un bourg de marché et un pont connus de nom.',unknown:'Autorités et ressources accessibles restent à découvrir.'},
+ {id:'mareuil',name:'Mareuil',kind:'Connu de nom',note:'La ville de la couronne, connue de nom seulement.',unknown:'La situation politique détaillée n’est pas établie.'}
+];
+export const distances=[['Valcroix','Relais de la Lande',14],['Relais de la Lande','Ormeval',12],['Ormeval','Pont-de-Rive',14],['Pont-de-Rive','Saint-Ordan',19],['Ormeval','Haut-Gué',20],['Haut-Gué','Saint-Ordan',17],['Pont-de-Rive','Rochebrune',18],['Rochebrune','Saint-Ordan',25],['Ormeval','Rochebrune',36]];
+export const regions=[['Val d’Orne','Vallée centrale de cultures et de passages. La région de départ de la campagne.'],['Hautes-Landes','Plateaux du nord-ouest où plusieurs seigneuries se sont soulevées.'],['Marches de l’Est','Places fortes, frontières seigneuriales et routes militaires.'],['Côte des Salines','Ports et marais salants, dont le ravitaillement est disputé.'],['Terres de Bréance','Provinces du sud, marchés et grands domaines.']];

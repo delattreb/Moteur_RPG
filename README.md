@@ -137,3 +137,7 @@ L’[export et la reprise de progression](EXEMPLES/CLAIRVAL/EXPORT_ET_REPRISE.md
 ## Sauvegarde automatique — Supabase
 
 L’édition en ligne propose une [synchronisation automatique par compte](EXEMPLES/CLAIRVAL/SAUVEGARDE_CLOUD.md) du parcours libre et de la projection publique de campagne. Les modifications locales sont envoyées et la copie en ligne est récupérée à l’ouverture ou au retour sur l’onglet. Une divergence suspend le transfert et demande de choisir la copie à conserver. Les commandes manuelles, l’export JSON et l’édition autonome restent disponibles.
+
+## Auvrenne — Le passage des vivants
+
+Le [carnet préparatoire d’Auvrenne](EXEMPLES/AUVRENNE/README.md) adapte le site au royaume et à Corbec Le Varn : palette bleu nuit et ivoire, portrait, carte initiale, lore public et appel d’Alix. Aucun fait de partie n’est joué par la navigation. Les notes personnelles et repères favoris sont synchronisés séparément de Clairval. La démonstration Clairval reste accessible via `clairval.html`.

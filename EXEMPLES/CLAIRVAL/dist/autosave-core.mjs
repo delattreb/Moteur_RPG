@@ -21,7 +21,7 @@ export function createAutoSync({store,progress,cache,notify,hash=fingerprint}){
   if(stopped)return;
   if(remote&&remoteHash===localHash){await remember(remote);if(sequence!==changes){pending=true;requested=true;return;}pending=false;tell('synced','Synchronisation automatique vérifiée · version '+remote.version+'.');return;}
   if(remote&&baseline&&remote.version<baseline.version){conflict();return;}
-  const empty=!snapshot.campaign&&snapshot.journey.length===1&&snapshot.journey[0]==='vaucombe';
+  const empty=progress.isEmpty?progress.isEmpty(snapshot):!snapshot.campaign&&snapshot.journey.length===1&&snapshot.journey[0]==='vaucombe';
   const pull=remote&&(baseline?localHash===baseline.hash:empty);
   if(pull){
    await store.owner();

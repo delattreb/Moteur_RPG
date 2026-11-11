@@ -1,25 +1,26 @@
-import {createAutoSync,stable} from './autosave-core.mjs';
-export function createCloudStore(client,userId){
+import {createAutoSync,stable} from './autosave-core.mjs?v=auvrenne-1';
+export function createCloudStore(client,userId,{table='clairval_saves',rpc='save_clairval'}={}){
  async function owner(){const {data,error}=await client.auth.getUser();if(error||data.user?.id!==userId)throw Error('Session modifiée. Reconnectez-vous avant de synchroniser.');}
  return {
-  async read(){await owner();const {data,error}=await client.from('clairval_saves').select('payload,version,updated_at').eq('user_id',userId).maybeSingle();if(error)throw error;return data;},
-  async write(payload,expectedVersion){await owner();const {data,error}=await client.rpc('save_clairval',{p_payload:payload,p_expected_version:expectedVersion});if(error)throw error;if(!data||!Number.isInteger(data.version))throw Error('Réponse de sauvegarde invalide.');return data;},
+  async read(){await owner();const {data,error}=await client.from(table).select('payload,version,updated_at').eq('user_id',userId).maybeSingle();if(error)throw error;return data;},
+  async write(payload,expectedVersion){await owner();const {data,error}=await client.rpc(rpc,{p_payload:payload,p_expected_version:expectedVersion});if(error)throw error;if(!data||!Number.isInteger(data.version))throw Error('Réponse de sauvegarde invalide.');return data;},
   owner
  };
 }
 export async function mountCloud({client,user,document,window,progress}){
- const store=createCloudStore(client,user.id);
+ const store=createCloudStore(client,user.id,progress.cloudConfig);
+ if(progress.supportsLegacy===false)document.querySelector('#cloud-legacy').hidden=true;
  const status=document.querySelector('#cloud-status');
  const buttons=['#cloud-save','#cloud-load','#cloud-legacy'].map(id=>document.querySelector(id));
  let busy=false;
  let localStore;try{localStore=window.localStorage;}catch{}
- const automatic=window.addEventListener&&localStore?createAutoSync({store,progress,cache:{read:()=>JSON.parse(localStore.getItem('clairval.sync.'+user.id)||'null'),write:value=>localStore.setItem('clairval.sync.'+user.id,JSON.stringify(value))},notify:(_state,text)=>{status.textContent=text;}}):null;
+ const automatic=window.addEventListener&&localStore?createAutoSync({store,progress,cache:{read:()=>JSON.parse(localStore.getItem((progress.syncKey||'clairval.sync.'+user.id))||'null'),write:value=>localStore.setItem((progress.syncKey||'clairval.sync.'+user.id),JSON.stringify(value))},notify:(_state,text)=>{status.textContent=text;}}):null;
  async function run(action){
   if(busy)return;busy=true;automatic?.hold(true);buttons.forEach(b=>b.disabled=true);await automatic?.idle();status.textContent='Synchronisation en cours…';
   try{await action();}catch(error){status.textContent=String(error.message).includes('save_conflict')?'Une autre sauvegarde a été enregistrée entre-temps. Rien n’a été écrasé. Réessayez après vérification.':'Synchronisation impossible : '+(error.message||'vérifiez le réseau')+' Votre progression locale est conservée.';}
   finally{busy=false;automatic?.hold(false);buttons.forEach(b=>b.disabled=false);if(automatic?.hasPending()&&!automatic.isPaused())schedule();}
  }
- const describe=p=>p.campaign?'campagne '+p.campaign.campaignId+', révision '+p.campaign.revision:'parcours libre, '+p.journey.length+' étape(s)';
+ const describe=p=>progress.describe?progress.describe(p):p.campaign?'campagne '+p.campaign.campaignId+', révision '+p.campaign.revision:'parcours libre, '+p.journey.length+' étape(s)';
  buttons[0].addEventListener('click',()=>run(async()=>{
   const snapshot=progress.validate(progress.snapshot());
   const remote=await store.read();

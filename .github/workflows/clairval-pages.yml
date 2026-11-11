@@ -17,6 +17,7 @@ jobs:
       - name: Vérifier Auth et campagnes
         working-directory: EXEMPLES/CLAIRVAL
         run: |
+          node check-auvrenne.mjs
           node check-autosave.mjs
           node check-cloud.mjs
           node check-auth.mjs

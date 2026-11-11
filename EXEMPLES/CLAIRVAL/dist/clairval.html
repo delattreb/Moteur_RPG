@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2d1d12">
+<meta name="description" content="Les Chroniques de Clairval : un carnet de voyage médiéval, sa carte, ses personnages et ses quêtes.">
+<title>Les Chroniques de Clairval · Carnet de voyage</title>
+<link rel="stylesheet" href="clairval.css?v=controls-2">
+<style id="account-controls-styles">/* Decorative scenery must never intercept account or save controls. */
+.scenery,.scenery::after{pointer-events:none}
+.cloud-controls,#account-bar,#auth-panel{position:relative;z-index:1}
+.cloud-controls{margin:12px 22px;padding:16px;max-width:1756px;background:#ebd1a0;color:#3f2b1b;border:1px solid #b28b4e;border-radius:5px;box-shadow:0 4px 14px #0007}
+.cloud-actions{display:flex;flex-wrap:wrap;gap:10px}
+.cloud-controls button,#account-bar button,#auth-panel button{min-height:44px;padding:10px 16px;border:1px solid #d3aa60;border-radius:4px;background:#392514;color:#fff0d1;font-weight:bold}
+.cloud-controls button:hover,#account-bar button:hover,#auth-panel button:hover{background:#5d3c1b}
+.cloud-controls button:focus-visible,#account-bar button:focus-visible,#auth-panel button:focus-visible{outline:3px solid #835019;outline-offset:3px}
+.cloud-controls button:disabled{opacity:.65;cursor:wait}
+#cloud-status{margin-top:12px;line-height:1.5;color:#3f2b1b}
+#account-bar{flex-wrap:wrap;background:#291b12;color:#f4e0b4;border-block:1px solid #b28b4e}
+@media(max-width:600px){.cloud-controls{margin:10px}.cloud-actions{display:grid}.cloud-controls button{width:100%;text-align:left}#account-bar{justify-content:flex-start}}
+
+#clairval-app{position:relative;isolation:isolate}.cloud-controls,#account-bar{z-index:2}#scenery,#scenery *{pointer-events:none!important}
+.cloud-controls h2{font-size:20px;margin:0 0 12px;color:#3f2b1b}
+</style>
+<script type="module" src="auth.mjs?v=autosave-1"></script>
+</head>
+<body>
+<!-- AUTH_START -->
+<style>[hidden]{display:none!important}#auth-panel{max-width:520px;margin:8vh auto;padding:28px}#auth-form{display:grid;gap:12px}#auth-form input{width:100%;box-sizing:border-box;padding:12px}#auth-panel button{padding:12px}#auth-status{min-height:3em}#account-bar{display:flex;gap:16px;align-items:center;justify-content:flex-end;padding:12px}</style>
+<section id="auth-panel" class="parchment" aria-labelledby="auth-title">
+<h1 id="auth-title">Les Chroniques de Clairval</h1><p>Connectez-vous pour ouvrir votre carnet.</p>
+<form id="auth-form">
+<label for="auth-email">E-mail</label><input id="auth-email" name="email" type="email" autocomplete="username" required maxlength="254">
+<label for="auth-password">Mot de passe</label><input id="auth-password" name="password" type="password" autocomplete="current-password" required minlength="12" maxlength="128">
+<button class="gold-button" type="submit" value="login">Se connecter</button>
+<button type="submit" value="signup">Créer mon compte</button>
+</form><p>Pour un nouveau compte : au moins 12 caractères. Confirmez ensuite votre adresse par e-mail.</p>
+<p id="auth-status" role="status" aria-live="polite">Chargement de la connexion…</p><button id="auth-retry" type="button">Réessayer</button>
+<noscript>Activez JavaScript pour vous connecter.</noscript></section>
+<!-- AUTH_END -->
+<div id="clairval-app" hidden>
+<section class="cloud-controls" aria-label="Sauvegarde de votre progression"><h2>Sauvegarde automatique</h2><div class="cloud-actions"><button id="cloud-save" type="button">Sauvegarder en ligne</button> <button id="cloud-load" type="button">Récupérer ma sauvegarde</button> <button id="cloud-legacy" type="button">Récupérer mon ancien carnet local</button></div><p id="cloud-status" role="status" aria-live="polite"></p></section>
+<div id="account-bar"><a href="index.html" style="color:inherit">Ouvrir Auvrenne</a><span id="account-email"></span><button id="auth-logout" type="button">Se déconnecter</button></div>
+<a class="skip" href="#content">Aller au carnet</a>
+<div class="scenery" id="scenery" aria-hidden="true"></div>
+<header class="masthead">
+ <a href="#carte" class="identity" aria-label="Les Chroniques de Clairval, carte du monde">
+  <span class="banner" aria-hidden="true">♜</span>
+  <span><h1>Les Chroniques de Clairval</h1><p>Carnet de voyage</p></span>
+ </a>
+ <div class="day">Jour 12 · Crépuscule</div>
+</header>
+<div class="layout">
+ <nav class="navigation wood-frame" id="navigation" aria-label="Rubriques du carnet"></nav>
+ <main id="content" tabindex="-1"><noscript><section class="content-page parchment"><h2>Bienvenue à Clairval</h2><p>Active JavaScript dans ton navigateur pour consulter la carte, les personnages et leurs fiches.</p></section></noscript></main>
+ <aside class="encounters wood-frame" id="encounters" aria-label="Personnages rencontrés et quête en cours"></aside>
+ <section class="besace wood-frame" id="besace" aria-label="Objets de votre inventaire"></section>
+</div>
+<footer class="footer"><span>Clairval · Un univers à découvrir, au fil de vos pas.</span><button data-info="site">À propos de cet exemple</button></footer>
+<dialog id="detail" aria-labelledby="detail-title"><button class="close" data-close aria-label="Fermer la fiche">×</button><div id="detail-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</div>
+</body>
+</html>
