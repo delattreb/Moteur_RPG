@@ -50,13 +50,13 @@ console.log('Présentation chaude : fiches de deux personnages, quatre objets et
 window.location.hash='#carte';handlers['window:hashchange']();
 const mapHtml=node('#content').innerHTML;
 assert.equal((mapHtml.match(/class="atlas-marker"/g)||[]).length,8);
-assert.match(mapHtml,/class="atlas-sheet" style="width:100%"/);
+assert.match(mapHtml,/class="atlas-sheet" style="width:max\(1000px, 100%\)"/);
 for(const id of ['valcroix','lande','ormeval','pont','gue','ordan','rochebrune','mareuil']){
  assert.match(mapHtml,new RegExp('class="atlas-marker"[^>]*data-place="'+id+'"'));
  click({place:id});assert.equal(node('#detail').open,true);
  assert.ok(node('#detail-body').innerHTML.includes('detail-title'));
 }
-click({zoom:'25'});assert.equal(node('#world-map').style.width,'125%');
+click({zoom:'25'});assert.equal(node('#world-map').style.width,'max(1250px, 125%)');
 assert.equal(p.snapshot().journey.length,0);assert.equal(p.snapshot().campaign,null);
 console.log('Carte : huit repères ouvrent leurs fiches ; zoom partagé avec le fond ; aucun déplacement créé.');
 
@@ -113,4 +113,15 @@ fail=true;assert.throws(()=>p.update(prepared));fail=false;assert.equal(JSON.str
 assert.deepEqual(createProgress({storage,userId:'a'}).snapshot(),p.snapshot());
 assert.equal(createProgress({storage,userId:'b'}).snapshot().campaign,null);
 console.log('Partie : migration v1, initialisation sans scène, séances, lieux, état mission, HTML échappé, erreurs sans perte, restauration et isolation vérifiés.');
+
+const svg=fs.readFileSync(new URL('./dist/assets/auvrenne-map.svg',import.meta.url),'utf8');
+const labelBoxes=[...svg.matchAll(/<g class="settlement-label" data-name="([^"]+)"><rect x="([\d.]+)" y="([\d.]+)" width="([\d.]+)" height="([\d.]+)"/g)].map(m=>({name:m[1],x:+m[2],y:+m[3],w:+m[4],h:+m[5]}));
+assert.equal(labelBoxes.length,8);assert.match(svg,/Old English Text MT/);
+const pins=[[635,789],[835,709],[997,725],[1135,669],[1097,533],[1335,541],[1385,773],[230,365]];
+for(const box of labelBoxes){
+ // Largest pin footprint: current-position ring, at the minimum 1000px map width.
+ for(const [x,y] of pins){const dx=Math.max(box.x-x,0,x-box.x-box.w),dy=Math.max(box.y-y,0,y-box.y-box.h);assert.ok(Math.hypot(dx,dy)>38.4,box.name+' overlaps a pin');}
+ for(const other of labelBoxes){if(box===other)continue;assert.ok(box.x+box.w<=other.x||other.x+other.w<=box.x||box.y+box.h<=other.y||other.y+other.h<=box.y,box.name+' overlaps '+other.name);}
+}
+console.log('Carte : huit cartouches médiévaux, sans chevauchement entre noms ou avec les repères au zoom minimal.');
 

@@ -4,6 +4,9 @@ Versions du dépôt, classées de la plus récente à la plus ancienne. Les vers
 
 ## À venir
 
+- Carte Auvrenne : noms replacés sur des cartouches de parchemin, typographie gothique avec polices de repli, zoom minimal lisible et défilement horizontal. Contrôles de chevauchement des noms et repères.
+
+
 - Journal de partie Auvrenne : départ initialisé à Valcroix, séances publiques, jour fictif, position consignée et état de la mission.
 - Carte : distinction entre repères connus, positions consignées et position actuelle ; observations publiques accessibles dans les fiches.
 - Lecture des anciens carnets version 1 avec conservation des notes et favoris ; sauvegarde version 2, restauration et validation testées.
