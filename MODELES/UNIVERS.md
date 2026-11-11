@@ -42,3 +42,11 @@ Lieux autorisés et statut de connaissance :
 Trajets réellement parcourus :
 Position actuelle révélée :
 Éléments à exclure des données, médias et métadonnées du site :
+
+## Carnet personnel illustré
+Forme adaptée à l'univers :
+Traitement du portrait et des objets importants :
+Références visuelles validées et invariants :
+Palette et symboles communs au carnet, au lore et à l'atlas :
+Lisibilité du texte et adaptation mobile :
+Modèle public à utiliser : MODELES/CARNET_PERSONNAGE.md.

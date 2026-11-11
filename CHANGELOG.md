@@ -3,6 +3,16 @@
 ## À venir
 Les évolutions seront décrites ici avant leur prochaine version.
 
+## 1.4.0 — 11 novembre 2026
+- Carnet personnel illustré retenu pour la fiche du personnage sur le site.
+- Cinq rubriques : identité, état, savoir-faire, possessions et engagements.
+- Portraits, objets et annotations adaptés à l'univers avec continuité graphique.
+- Modèle public vierge et règles de mise à jour fondées sur les faits joués.
+- Texte accessible indépendamment des images ; lisibilité mobile et exclusion des secrets.
+- Questionnaire, instructions MJ et spécification du site alignés sur ce choix.
+
+Validation documentaire : liens internes, cohérence des versions et modèle sans données de partie. Site, images et carnet non encore implémentés. Mise à jour de main ; aucune nouvelle release GitHub créée.
+
 ## 1.3.1 — 11 novembre 2026
 - Parcours explicite séparant maintenance du moteur, nouvelle campagne et reprise.
 - Questionnaire propre à chaque nouvelle campagne ; reprise des réponses accessibles sans répétition.

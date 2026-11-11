@@ -36,3 +36,6 @@ Le brouillard est un effet de présentation sur des données déjà filtrées. A
 7. La consultation du lore ne fait pas avancer le temps de jeu.
 
 Ces critères seront vérifiés sur le site construit ; leur présence dans le référentiel ne vaut pas validation d'une implémentation.
+
+## Carnet du personnage
+Le site comprend aussi le carnet personnel illustré défini dans CARNET_PERSONNAGE.md : identité, état, savoir-faire, possessions et engagements. Utiliser MODELES/CARNET_PERSONNAGE.md comme modèle public. Le carnet, le lore et la carte partagent la même direction graphique ; leur consultation n'avance pas la fiction. Cette intégration reste à implémenter.
