@@ -1,38 +1,92 @@
 # Moteur RPG
 
-Version 1.3.0 — 11 novembre 2026.
+**Version 1.3.0** — [Première release](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0)
 
-Moteur de jeu de rôle narratif pour un joueur et un maître du jeu humain ou assistant. Il organise les intentions, les décisions et les conséquences dans un monde cohérent. Il s'agit de règles utilisables dans une conversation, pas encore d'un logiciel exécutable.
+Moteur de jeu de rôle narratif pour un joueur et un maître du jeu humain ou assistant. Il fournit les règles et les modèles pour créer un univers, préparer une campagne et faire évoluer l'histoire selon les décisions du joueur. Cette édition est un référentiel utilisable en conversation ; elle ne contient pas encore d'application exécutable.
+
+## Une campagne de trente jours
+
+| Paramètre | Format retenu |
+| --- | --- |
+| Durée de l'histoire | 30 jours fictifs |
+| Calendrier visé | 30 jours réels de jeu |
+| Sessions | 60, à raison de deux par jour |
+| Durée d'une session | 10 à 15 minutes |
+| Temps quotidien | Environ 20 à 30 minutes |
+| En cas d'absence | Pause de l'histoire et décalage du calendrier réel |
+
+Les deux sessions d'une journée réelle couvrent ensemble une journée fictive. Le scénario prépare une progression jusqu'au dénouement et à l'épilogue, avec une échéance au jour 30. Les décisions restent ouvertes : une réussite rapide est conservée, les refus sont respectés et aucune scène n'est ajoutée pour remplir artificiellement la durée.
+
+Voir [le cadre de campagne](CAMPAGNE_30_JOURS.md).
+
+## Une boucle de jeu qui avance
+
+**Intention → résolution → conséquences → réaction du monde → prochaine décision.**
+
+- Une démarche comprend les gestes et questions ordinaires nécessaires, sans validation à chaque étape.
+- Les preuves débouchent sur des actions et des issues concrètes, au lieu d'une chaîne d'interrogatoires.
+- Les missions aboutissent avec un bénéfice, un coût ou une conséquence perceptible.
+- Les PNJ poursuivent leurs objectifs selon les événements et le temps fictif.
+- Les choix de réponse sont numérotés, action libre comprise ; un numéro seul suffit pour répondre.
+- Le jeu alterne pression, exploration, relations et respiration, sans combat ni cliffhanger obligatoire.
+
+Le mode narratif est disponible, ainsi qu'une option de dés à choisir explicitement avant usage. Voir [les règles](REGLES.md).
+
+## Créer l'univers et son identité visuelle
+
+Le [questionnaire progressif](QUESTIONNAIRE_UNIVERS.md) définit l'univers une question à la fois : ambiance, échelle, magie ou technologie, société, pouvoirs, géographie, place du personnage, connaissances initiales et direction graphique.
+
+Le [modèle d'univers](MODELES/UNIVERS.md) distingue les choix validés, le lore public et les éléments privés du MJ. Palette, typographies, symboles et illustrations sont adaptés à l'univers créé.
+
+## Lore et carte sur le site
+
+La [spécification du site](SITE_LORE_ET_CARTE.md) prévoit :
+
+- Un lore consultable : présentation du monde, histoire connue, cultures, factions et glossaire.
+- Une carte stylisée avec zoom, déplacement, position actuelle, trajets et fiches de lieux.
+- Une découverte progressive au fil des déplacements accomplis et des informations réellement obtenues.
+- Une distinction entre lieux inconnus, connus de nom et visités.
+- Une géographie stable et des ressources publiques excluant les secrets du MJ.
+
+**Le site et la carte restent à construire après validation de l'univers.** La version 1.3.0 fournit leur spécification ; elle ne publie pas encore de site et ne réalise aucune synchronisation automatique.
+
+## Construire un scénario adaptable
+
+Le [guide de construction](CONSTRUIRE_UNE_CAMPAGNE.md) organise :
+
+- Un conflit central, une échéance et plusieurs issues possibles.
+- Quatre à six personnages moteurs aux objectifs distincts.
+- Deux intrigues secondaires facultatives.
+- Des décisions dont les effets persistent dans les situations suivantes.
+- Une préparation détaillée des deux prochaines sessions, révisée après le jeu.
+- Un point de contrôle tous les cinq jours fictifs.
+
+Utiliser le [modèle de campagne](MODELES/CAMPAGNE.md) et le [modèle de situation](MODELES/SITUATION.md). L'exemple privé [Le passage des Hautes-Eaux](EXEMPLES/CAMPAGNE_TEST.md) présente cinq acteurs et deux sessions conditionnelles préparées. Il reste à jouer et ne fixe pas l'univers par défaut du moteur.
 
 ## Commencer
-1. Lire [les règles](REGLES.md).
-2. Utiliser [le démarrage](DEMARRER.md) pour cadrer une nouvelle partie.
-3. Pour un assistant, copier [les instructions MJ](INSTRUCTIONS_MJ.md) dans le projet et lui fournir les fichiers du moteur.
-4. Préparer une situation avec le [modèle](MODELES/SITUATION.md), puis commencer sur demande du joueur.
 
-Le tour de jeu : intention → résolution → conséquences → réaction du monde → prochaine décision.
+1. Lire [les règles](REGLES.md) et [le démarrage](DEMARRER.md).
+2. Créer l'univers avec le [questionnaire](QUESTIONNAIRE_UNIVERS.md), en réutilisant les réponses déjà données.
+3. Valider le cadre et remplir les modèles d'univers et de campagne.
+4. Préparer les deux premières sessions avec le guide de construction.
+5. Pour un assistant, fournir les fichiers et copier [les instructions MJ](INSTRUCTIONS_MJ.md) dans le projet.
+6. Commencer la première session sur demande du joueur.
 
-## Format de campagne
-60 sessions de 10 à 15 minutes : deux sessions quotidiennes, couvrant ensemble une journée fictive. L'histoire dure trente jours ; le calendrier réel vise trente jours et se décale en cas d'absence. Voir [la progression de campagne](CAMPAGNE_30_JOURS.md).
+Les modèles et notes d'exemple destinés au MJ restent privés. Seuls les contenus publics autorisés sont destinés au futur site.
 
-## Construire le scénario
-Suivre [le guide de construction](CONSTRUIRE_UNE_CAMPAGNE.md) et remplir [le modèle de campagne](MODELES/CAMPAGNE.md). [Le passage des Hautes-Eaux](EXEMPLES/CAMPAGNE_TEST.md) fournit un exemple privé indépendant, avec cinq acteurs et deux sessions conditionnelles préparées. Il reste à jouer.
+## Évolutions
 
-## Univers, lore et carte
-Le [questionnaire progressif](QUESTIONNAIRE_UNIVERS.md) crée l'univers et sa direction visuelle. Le [modèle d'univers](MODELES/UNIVERS.md) sépare lore public et géographie privée. La [spécification du site](SITE_LORE_ET_CARTE.md) prévoit un lore consultable et une carte stylisée révélée par les déplacements. Le site reste à construire après validation de l'univers.
+| Version | Évolution |
+| --- | --- |
+| 1.0.0 | Première base propre : intentions, conséquences, monde actif et modèles de jeu |
+| 1.1.0 | Démarches complètes, missions qui aboutissent et choix numérotés |
+| 1.2.0 | Campagne de 60 sessions de 10 à 15 minutes sur trente jours fictifs |
+| 1.3.0 | Construction de campagne, questionnaire d'univers, lore et spécification de carte progressive |
 
-## Contenu
-- CAMPAGNE_30_JOURS.md : durée, progression et préparation du scénario.
-- REGLES.md : noyau, rythme, résolution et monde actif.
-- DEMARRER.md : création rapide et cadre de jeu.
-- INSTRUCTIONS_MJ.md : consignes autonomes pour un assistant.
-- MODELES/SITUATION.md : fiche vierge de préparation privée.
-- EXEMPLES/SCENE_TEST.md : situation indépendante pour éprouver le dynamisme.
-- CHANGELOG.md et VERSION : suivi des versions.
+Voir [l'historique détaillé](CHANGELOG.md) et [la release 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0).
 
-Cette distribution ne contient aucune campagne jouée, sauvegarde, donnée personnelle, image ou ancien script. Le site de lore et sa carte sont prévus pour la campagne, avec un graphisme adapté à l'univers ; leur implémentation reste à réaliser. Aucune continuité entre conversations n'est automatique.
+## État de validation
 
-## Versions
-Cette première édition propre repart de 1.0.0 ; elle remplace le numéro de travail local 2.0.0 pour cette nouvelle distribution. Les anciennes campagnes ne sont pas migrées.
+Un essai conversationnel court a permis d'améliorer le rythme. Les fichiers, les liens internes et le découpage des soixante sessions ont été contrôlés. Le nouveau scénario d'exemple et une campagne complète restent à éprouver en partie.
 
-Les améliorations sont consignées dans CHANGELOG.md. Corrections compatibles : 1.0.x ; ajouts compatibles : 1.x.0 ; changements incompatibles : x.0.0. Une version annoncée distingue contrôles documentaires et essais réellement joués. La version 1.1.0 intègre le retour d'un essai conversationnel court : démarches regroupées, missions qui aboutissent et choix numérotés. Une campagne longue reste à éprouver.
+Le dépôt contient le moteur générique, des modèles vierges et des exemples de préparation. Il ne contient aucune sauvegarde de partie, ancienne campagne ou donnée personnelle. La continuité entre conversations n'est pas automatique.
