@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc"><title id="title">Auvrenne - carte publique initiale</title><desc id="desc">Royaume et r�gion du Val d'Orne. Valcroix est le d�part pr�vu. Les chemins sont connus de m�moire, aucun d�placement de la campagne n'a �t� jou�.</desc><defs><radialGradient id="warm-paper"><stop offset="0" stop-color="#F7E6BE"/><stop offset="1" stop-color="#D8B476"/></radialGradient><filter id="paper-grain"><feTurbulence baseFrequency=".55" numOctaves="3" seed="7" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".09"/></feComponentTransfer></filter><filter id="ink-shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#684323" flood-opacity=".25"/></filter>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc"><title id="title">Auvrenne - carte publique initiale</title><desc id="desc">Royaume et région du Val d'Orne. Valcroix est le départ prévu. Les chemins sont connus de mémoire, aucun déplacement de la campagne n’a été joué.</desc><defs><radialGradient id="warm-paper"><stop offset="0" stop-color="#F7E6BE"/><stop offset="1" stop-color="#D8B476"/></radialGradient><filter id="paper-grain"><feTurbulence baseFrequency=".55" numOctaves="3" seed="7" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".09"/></feComponentTransfer></filter><filter id="ink-shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#684323" flood-opacity=".25"/></filter>
 <symbol id="hamlet" viewBox="0 0 120 90"><g stroke="#654526" stroke-width="2" stroke-linejoin="round"><path d="M5 76Q60 60 116 77" fill="none" opacity=".4"/><path d="M13 44h32v28H13z" fill="#d6b47b"/><path d="m7 45 22-21 23 21z" fill="#955535"/><path d="M50 34h40v38H50z" fill="#ead2a0"/><path d="m44 35 27-25 26 25z" fill="#a46539"/><path d="M89 49h20v24H89z" fill="#c49f62"/><path d="m84 50 15-16 15 16z" fill="#79472e"/><path d="M62 72V52h13v20" fill="#62432a"/><path d="M20 52h7v9h-7z M78 42h6v9h-6z" fill="#68492c"/></g></symbol>
 <symbol id="abbey" viewBox="0 0 140 110"><g stroke="#67492c" stroke-width="2" stroke-linejoin="round"><path d="M10 90h120" opacity=".4"/><path d="M20 51h95v38H20z" fill="#dbc292"/><path d="m14 52 49-25 58 25z" fill="#9a613e"/><path d="M90 26h27v64H90z" fill="#e9d7ad"/><path d="m85 27 18-21 19 21z" fill="#835136"/><path d="M48 89V68q12-22 24 0v21" fill="#765239"/><path d="M98 39h10v18H98z M29 62h8v13h-8z M79 62h6v13h-6z" fill="#896747"/><path d="M103 6V0 M98 3h10" fill="none"/></g></symbol>
 <symbol id="pine" viewBox="0 0 40 65"><g stroke="#536044" stroke-width="1.3"><path d="M19 63V35" stroke="#775132" stroke-width="3"/><path d="m20 2-12 23h6L4 42h9L1 55q20 7 38-1L28 41h8L26 24h6z" fill="#7b8052"/><path d="m20 9-5 16h5l-7 17h7l-7 12" fill="none" stroke="#b3ad75"/></g></symbol>
@@ -7,9 +7,9 @@
 <rect x="30" y="30" width="1540" height="1060" fill="none" stroke="#B9955B" stroke-width="1"/>
 <rect x="42" y="42" width="1516" height="143" fill="#352316" stroke="#352316" stroke-width="1"/>
 <text x="68.0" y="113.4" fill="#EBD1A0" font-size="60" font-family="Georgia,serif" font-weight="normal">AUVRENNE</text>
-<text x="70.0" y="154.5" fill="#EBD1A0" font-size="25" font-family="Arial,sans-serif" font-weight="normal">Le passage des vivants � Carnet de Corbec Le Varn</text>
+<text x="70.0" y="154.5" fill="#EBD1A0" font-size="25" font-family="Arial,sans-serif" font-weight="normal">Le passage des vivants · Carnet de Corbec Le Varn</text>
 <text x="1280.0" y="98.6" fill="#EBD1A0" font-size="23" font-family="Arial,sans-serif" font-weight="bold">PRINTEMPS</text>
-<text x="1280.0" y="132.0" fill="#B9955B" font-size="17" font-family="Arial,sans-serif" font-weight="normal">Avant la premi�re sc�ne</text>
+<text x="1280.0" y="132.0" fill="#B9955B" font-size="17" font-family="Arial,sans-serif" font-weight="normal">Avant la première scène</text>
 <rect x="42" y="212" width="325" height="688" fill="none" stroke="#B9955B" stroke-width="1"/>
 <text x="64.0" y="257.3" fill="#49301B" font-size="29" font-family="Georgia,serif" font-weight="normal">Le royaume</text>
 <polygon points="174,298 227,310 248,350 301,386 286,442 318,488 300,545 311,597 279,639 286,692 229,740 166,732 138,700 103,684 118,633 87,601 97,555 76,520 106,478 101,419 138,384 128,335" fill="#DEC28C" stroke="#886238" stroke-width="3"/>
@@ -21,19 +21,19 @@
 <text x="211.0" y="461.1" fill="#886238" font-size="15" font-family="Arial,sans-serif" font-weight="bold">MARCHES</text>
 <text x="228.0" y="482.1" fill="#886238" font-size="15" font-family="Arial,sans-serif" font-weight="bold">DE L'EST</text>
 <text x="112.0" y="548.0" fill="#49301B" font-size="17" font-family="Arial,sans-serif" font-weight="bold">VAL D'ORNE</text>
-<text x="84.0" y="613.2" fill="#886238" font-size="14" font-family="Arial,sans-serif" font-weight="bold">C�TE DES</text>
+<text x="84.0" y="613.2" fill="#886238" font-size="14" font-family="Arial,sans-serif" font-weight="bold">CÔTE DES</text>
 <text x="89.0" y="633.2" fill="#886238" font-size="14" font-family="Arial,sans-serif" font-weight="bold">SALINES</text>
-<text x="169.0" y="685.0" fill="#886238" font-size="16" font-family="Arial,sans-serif" font-weight="bold">BR�ANCE</text>
+<text x="169.0" y="685.0" fill="#886238" font-size="16" font-family="Arial,sans-serif" font-weight="bold">BRÉANCE</text>
 <circle cx="230" cy="365" r="5" fill="#352316" stroke="#49301B" stroke-width="2"/>
 <text x="244.0" y="365.9" fill="#49301B" font-size="18" font-family="Georgia,serif" font-weight="normal">Mareuil</text>
 <rect x="116" y="514" width="129" height="68" fill="none" stroke="#352316" stroke-width="2"/>
-<text x="63.0" y="799.9" fill="#49301B" font-size="18" font-family="Arial,sans-serif" font-weight="bold">Cadre g�n�ral connu</text>
+<text x="63.0" y="799.9" fill="#49301B" font-size="18" font-family="Arial,sans-serif" font-weight="bold">Cadre général connu</text>
 <text x="63.0" y="831.0" fill="#886238" font-size="17" font-family="Arial,sans-serif" font-weight="normal">La guerre ne fixe pas</text>
-<text x="63.0" y="855.0" fill="#886238" font-size="17" font-family="Arial,sans-serif" font-weight="normal">les positions des arm�es</text>
+<text x="63.0" y="855.0" fill="#886238" font-size="17" font-family="Arial,sans-serif" font-weight="normal">les positions des armées</text>
 <text x="63.0" y="879.0" fill="#886238" font-size="17" font-family="Arial,sans-serif" font-weight="normal">sur cette carte.</text>
 <rect x="395" y="212" width="1163" height="688" fill="none" stroke="#B9955B" stroke-width="1"/>
 <text x="420.0" y="264.9" fill="#49301B" font-size="35" font-family="Georgia,serif" font-weight="normal">Le Val d'Orne</text>
-<text x="421.0" y="296.8" fill="#886238" font-size="20" font-family="Arial,sans-serif" font-weight="normal">Routes de m�moire � conditions actuelles � v�rifier</text>
+<text x="421.0" y="296.8" fill="#886238" font-size="20" font-family="Arial,sans-serif" font-weight="normal">Routes de mémoire · conditions actuelles à vérifier</text>
 <polyline points="502,366 520,336 540,366" fill="none" stroke="#B9955B" stroke-width="2" stroke-linejoin="round"/>
 <polyline points="520,336 526,358" fill="none" stroke="#B9955B" stroke-width="1" stroke-linejoin="round"/>
 <polyline points="552,376 570,346 590,376" fill="none" stroke="#B9955B" stroke-width="2" stroke-linejoin="round"/>
@@ -66,7 +66,7 @@
 <polyline points="997,725 1000,810 1210,850 1385,773" fill="none" stroke="#886238" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 9"/>
 <text x="469.0" y="496.9" fill="#886238" font-size="19" font-family="Georgia,serif" font-weight="normal">Bois et chemins</text>
 <text x="483.0" y="521.9" fill="#886238" font-size="19" font-family="Georgia,serif" font-weight="normal">secondaires</text>
-<text x="746.0" y="855.0" fill="#886238" font-size="17" font-family="Georgia,serif" font-weight="normal">D�tour des fermes hautes</text>
+<text x="746.0" y="855.0" fill="#886238" font-size="17" font-family="Georgia,serif" font-weight="normal">Détour des fermes hautes</text>
 <g id="illustrated-landmarks" filter="url(#ink-shadow)" aria-hidden="true"><use href="#pine" x="450" y="550" width="40" height="65"/><use href="#pine" x="480" y="565" width="34" height="55.25"/><use href="#pine" x="510" y="548" width="40" height="65"/><use href="#pine" x="550" y="570" width="28" height="45.5"/><use href="#pine" x="595" y="455" width="36" height="58.5"/><use href="#pine" x="630" y="445" width="40" height="65"/><use href="#pine" x="665" y="462" width="32" height="52"/><use href="#pine" x="720" y="490" width="28" height="45.5"/><use href="#pine" x="780" y="460" width="36" height="58.5"/><use href="#pine" x="865" y="430" width="28" height="45.5"/><use href="#pine" x="1435" y="480" width="30" height="48.75"/><use href="#pine" x="1460" y="520" width="34" height="55.25"/><use href="#hamlet" x="580" y="715" width="105" height="79"/><use href="#hamlet" x="785" y="635" width="105" height="79"/><use href="#hamlet" x="947" y="651" width="105" height="79"/><use href="#hamlet" x="1085" y="595" width="105" height="79"/><use href="#hamlet" x="1047" y="459" width="105" height="79"/><use href="#abbey" x="1277" y="448" width="119" height="94"/><use href="#keep" x="1349" y="681" width="76" height="85"/></g>
 <circle cx="635" cy="789" r="12" fill="#EBD1A0" stroke="#352316" stroke-width="3"/>
 <circle cx="635" cy="789" r="5" fill="#352316" stroke="#49301B" stroke-width="2"/>
@@ -86,21 +86,21 @@
 <text x="735.5" y="688.7" fill="#49301B" font-size="21" font-family="Georgia,serif" font-weight="normal">Relais de la Lande</text>
 <text x="932.5" y="770.5" fill="#49301B" font-size="25" font-family="Georgia,serif" font-weight="normal">Ormeval</text>
 <text x="1114.5" y="651.6" fill="#49301B" font-size="23" font-family="Georgia,serif" font-weight="normal">Pont-de-Rive</text>
-<text x="1046.0" y="508.6" fill="#49301B" font-size="23" font-family="Georgia,serif" font-weight="normal">Haut-Gu�</text>
+<text x="1046.0" y="508.6" fill="#49301B" font-size="23" font-family="Georgia,serif" font-weight="normal">Haut-Gué</text>
 <text x="1285.0" y="581.5" fill="#49301B" font-size="25" font-family="Georgia,serif" font-weight="normal">Saint-Ordan</text>
 <text x="1339.0" y="817.6" fill="#49301B" font-size="23" font-family="Georgia,serif" font-weight="normal">Rochebrune</text>
-<text x="590.5" y="860.0" fill="#886238" font-size="16" font-family="Arial,sans-serif" font-weight="normal">d�part pr�vu</text>
+<text x="590.5" y="860.0" fill="#886238" font-size="16" font-family="Arial,sans-serif" font-weight="normal">départ prévu</text>
 <polyline points="1502,294 1502,347" fill="none" stroke="#352316" stroke-width="2" stroke-linejoin="round"/>
 <polygon points="1502,285 1495,301 1509,301" fill="#352316" stroke="#352316" stroke-width="2"/>
 <text x="1494.0" y="277.7" fill="#49301B" font-size="21" font-family="Georgia,serif" font-weight="normal">N</text>
 <rect x="42" y="925" width="1516" height="152" fill="#D9BC83" stroke="#B9955B" stroke-width="1"/>
 <text x="64.0" y="961.6" fill="#49301B" font-size="23" font-family="Arial,sans-serif" font-weight="bold">Lire le carnet</text>
 <polyline points="66,990 132,990" fill="none" stroke="#886238" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 9"/>
-<text x="148.0" y="994.8" fill="#49301B" font-size="20" font-family="Arial,sans-serif" font-weight="normal">Route connue de m�moire</text>
+<text x="148.0" y="994.8" fill="#49301B" font-size="20" font-family="Arial,sans-serif" font-weight="normal">Route connue de mémoire</text>
 <circle cx="585" cy="989" r="8" fill="#EBD1A0" stroke="#49301B" stroke-width="2"/>
 <text x="609.0" y="994.8" fill="#49301B" font-size="20" font-family="Arial,sans-serif" font-weight="normal">Lieu connu de nom</text>
 <circle cx="1008" cy="989" r="11" fill="#EBD1A0" stroke="#352316" stroke-width="3"/>
 <circle cx="1008" cy="989" r="4" fill="#352316" stroke="#49301B" stroke-width="2"/>
-<text x="1034.0" y="994.8" fill="#49301B" font-size="20" font-family="Arial,sans-serif" font-weight="normal">D�part propos�, non jou�</text>
-<text x="64.0" y="1048.9" fill="#886238" font-size="19" font-family="Arial,sans-serif" font-weight="normal">Carte illustr�e, g�ographie sch�matique : les distances du carnet font foi. Aucun trajet de cette campagne n'a encore �t� accompli.</text>
+<text x="1034.0" y="994.8" fill="#49301B" font-size="20" font-family="Arial,sans-serif" font-weight="normal">Départ proposé, non joué</text>
+<text x="64.0" y="1048.9" fill="#886238" font-size="19" font-family="Arial,sans-serif" font-weight="normal">Carte illustrée, géographie schématique : les distances du carnet font foi. Aucun trajet de cette campagne n'a encore été accompli.</text>
 </svg>
