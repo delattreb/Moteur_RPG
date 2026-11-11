@@ -18,3 +18,9 @@ Présenter toutes les options de réponse avec des numéros, y compris l'action 
 
 ## Durée retenue
 Appliquer CAMPAGNE_30_JOURS.md : 60 sessions de 10 à 15 minutes, deux par journée fictive et par jour réel joué. Préparer une échéance fictionnelle au jour 30 et un dénouement possible selon les choix. Le calendrier réel se décale en cas d'absence. Ce format est déjà choisi : ne pas redemander sa validation au cadrage.
+
+## Construction avant lancement
+Lire CONSTRUIRE_UNE_CAMPAGNE.md et remplir MODELES/CAMPAGNE.md : conflit central, quatre à six acteurs moteurs, deux intrigues secondaires facultatives, échéance et issues possibles. Préparer les deux premières sessions avec des variantes selon les décisions. EXEMPLES/CAMPAGNE_TEST.md est un exemple séparé, jamais un univers à importer automatiquement.
+
+## Univers et site
+Utiliser QUESTIONNAIRE_UNIVERS.md pour créer progressivement le monde, sans reposer les réponses déjà recueillies. Après validation, remplir MODELES/UNIVERS.md, puis préparer le scénario dans cet univers. Prévoir le lore public et la carte progressive du site selon SITE_LORE_ET_CARTE.md ; la direction graphique découle des choix du joueur. Aucun site n'est créé par ces documents seuls.

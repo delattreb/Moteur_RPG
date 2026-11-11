@@ -1,4 +1,4 @@
-# Campagne en trente jours — 1.2.0
+# Campagne en trente jours — 1.3.0
 
 ## Format retenu
 - 60 sessions de 10 à 15 minutes de jeu actif, hors préparation et opérations techniques.

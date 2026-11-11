@@ -1,4 +1,4 @@
-# Règles du moteur RPG — 1.2.0
+# Règles du moteur RPG — 1.3.0
 
 ## 1. Répartition des rôles
 Le joueur décide des intentions, paroles et engagements de son personnage. Le MJ décrit les faits perceptibles, joue les autres acteurs et arbitre les tentatives. Il ne choisit pas les pensées ou décisions du joueur. Les demandes explicites du joueur priment sur ces règles.
@@ -68,3 +68,6 @@ Cette édition n'implémente ni sauvegarde persistante ni synchronisation. Ne pa
 
 ## 8. Durée de campagne
 Le format retenu est de 60 sessions de 10 à 15 minutes, deux par jour réel joué et par journée fictive, pour trente jours dans l'histoire. Appliquer CAMPAGNE_30_JOURS.md pour la progression et l'adaptation du scénario. Ce cadre organise la préparation sans imposer les décisions ou annuler une réussite rapide. Les interruptions et absences ne consomment aucun temps fictif.
+
+## 9. Construction du scénario
+Appliquer CONSTRUIRE_UNE_CAMPAGNE.md. Préparer conflit, acteurs actifs, branches et issues possibles. Les choix doivent modifier les conditions des situations suivantes ; rejoindre une scène commune n'efface ni engagements, ni coûts, ni relations. Les intrigues secondaires restent facultatives. Un exemple préparé n'est pas un scénario validé en partie.

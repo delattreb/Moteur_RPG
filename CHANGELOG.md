@@ -3,6 +3,17 @@
 ## À venir
 Les évolutions seront décrites ici avant leur prochaine version.
 
+## 1.3.0 — 11 novembre 2026
+- Questionnaire progressif de création d'univers, modèle de lore et direction graphique adaptée.
+- Spécification du site : lore public consultable et carte stylisée découverte par les déplacements ; géographie privée exclue des ressources publiques.
+- Site et carte non encore implémentés : leur création suivra la validation de l'univers.
+- Guide de construction : conflit central, échéance, quatre à six acteurs et deux intrigues secondaires facultatives.
+- Modèle privé vierge de campagne avec décisions, conséquences et préparation conditionnelle de deux sessions.
+- Exemple indépendant « Le passage des Hautes-Eaux » : cinq acteurs, initiatives révisables, issues multiples et première journée préparée.
+- Vérification des branches : les choix conservent des effets dans la session suivante.
+
+Validation documentaire : liens, cohérence de version et présence des variantes initiales. Le nouvel exemple et la campagne complète ne sont pas encore joués. Aucune sauvegarde ajoutée.
+
 ## 1.2.0 — 11 novembre 2026
 - Cadre choisi : 60 sessions de 10 à 15 minutes, deux par jour réel joué et par journée fictive.
 - Architecture sur trente jours fictifs, dénouement et épilogue préparés.
