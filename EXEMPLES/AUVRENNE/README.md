@@ -29,3 +29,12 @@ Les fichiers d’application sont dans `../CLAIRVAL/dist/auvrenne-*`. Le modèle
 `node check-auvrenne.mjs`, `node check-autosave.mjs`, `node check-cloud.mjs`, `node check-auth.mjs`, `node check-campaign.mjs`. Les vérifications s’exécutent depuis `EXEMPLES/CLAIRVAL`.
 
 La préparation MJ privée reste hors du dépôt et des ressources du site. Le dossier public ne contient ni initiatives secrètes ni résultats futurs.
+
+
+## Sauvegarde depuis le chat de jeu
+
+Le protocole [SAUVEGARDE_CHAT.md](SAUVEGARDE_CHAT.md) permet au chat « Auvrenne — Partie de Corbec » d’enregistrer directement chaque séance réellement jouée, avec accès au connecteur Supabase. Aucun observateur de conversation ni tâche périodique n’est installé. La fonction [record_auvrenne_session](../CLAIRVAL/sql/auvrenne-session-autosave.sql) est déjà déployée ; sa source suppose l’existence de la table auvrenne_saves et s’installe après sa création. Elle contrôle le compte, la version et les doublons, sans changer le format du carnet.
+
+Les [tests SQL](../CLAIRVAL/sql/check-auvrenne-session-autosave.sql) utilisent une transaction annulée et exigent les claims d’un compte autorisé avec une partie initialisée et une mission encore proposée. Les tests réalisés couvrent aussi l’absence d’authentification et l’isolation du compte. Aucun contenu de test n’a été conservé dans la partie.
+
+Le site récupère la progression à l’ouverture ou au retour sur l’onglet, sauf conflit local. Aucune modification du site statique ni nouvelle publication Pages n’est requise pour cette fonction serveur. Ne pas recopier dans le formulaire une séance déjà enregistrée depuis le chat.

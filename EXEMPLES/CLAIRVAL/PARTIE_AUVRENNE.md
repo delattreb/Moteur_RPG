@@ -8,7 +8,9 @@ Dans **Carnet**, utiliser **Initialiser le départ** : jour 1, Valcroix, zéro s
 
 ## Après une séance
 
-Dans **Journal de partie → Consigner une séance jouée**, indiquer le jour fictif, le lieu de fin, l’état de la mission et un résumé public des faits. La sauvegarde refuse un jour antérieur, un résumé vide, un lieu absent des huit repères existants ou une mission accomplie sans acceptation préalable.
+Le mode prévu est la sauvegarde directe depuis le chat de jeu, sans recopie. L’assistant applique [le protocole de sauvegarde](../AUVRENNE/SAUVEGARDE_CHAT.md), enregistre uniquement les faits joués et confirme après relecture en ligne. Le connecteur Supabase doit être disponible dans le chat ; sinon la sauvegarde est annoncée non confirmée.
+
+Le formulaire **Journal de partie → Consigner une séance jouée** reste une solution manuelle facultative. Ne pas l’utiliser pour recopier une séance déjà sauvegardée par le chat : cela créerait une autre entrée.
 
 La carte distingue les lieux connus, les positions consignées et la position actuelle. Les observations consignées apparaissent dans la fiche du lieu de fin. Si une séance comporte plusieurs lieux, ils doivent être décrits dans le résumé : seul le lieu de fin est ajouté aux repères de progression.
 

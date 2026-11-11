@@ -9,6 +9,11 @@ sessions_jouees: 0
 
 # Auvrenne — Le passage des vivants
 
+## Suivi de la partie
+
+Ce document décrit le cadre de préparation ; son état initial ne remplace pas la sauvegarde actuelle du joueur. Avant de reprendre le jeu, lire [le protocole de sauvegarde automatique depuis le chat](SAUVEGARDE_CHAT.md), puis relire la progression en ligne. À chaque clôture de séance jouée, l’assistant enregistre le bilan public directement via Supabase, sans recopie sur le site, et confirme après relecture. Le chat doit disposer du connecteur ; sinon annoncer que la sauvegarde n’est pas confirmée. Les réserves de préparation ne font jamais avancer la partie.
+
+
 > Carnet public de préparation. Rien dans ce document ne constitue un événement déjà joué. Les noms et détails ajoutés après le questionnaire sont des propositions de préparation, modifiables avant le lancement.
 
 ## Les choix validés
