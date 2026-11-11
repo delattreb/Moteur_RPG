@@ -6,7 +6,23 @@
 <meta name="theme-color" content="#2d1d12">
 <meta name="description" content="Les Chroniques de Clairval : un carnet de voyage médiéval, sa carte, ses personnages et ses quêtes.">
 <title>Les Chroniques de Clairval · Carnet de voyage</title>
-<link rel="stylesheet" href="clairval.css">
+<link rel="stylesheet" href="clairval.css?v=controls-2">
+<style id="account-controls-styles">/* Decorative scenery must never intercept account or save controls. */
+.scenery,.scenery::after{pointer-events:none}
+.cloud-controls,#account-bar,#auth-panel{position:relative;z-index:1}
+.cloud-controls{margin:12px 22px;padding:16px;max-width:1756px;background:#ebd1a0;color:#3f2b1b;border:1px solid #b28b4e;border-radius:5px;box-shadow:0 4px 14px #0007}
+.cloud-actions{display:flex;flex-wrap:wrap;gap:10px}
+.cloud-controls button,#account-bar button,#auth-panel button{min-height:44px;padding:10px 16px;border:1px solid #d3aa60;border-radius:4px;background:#392514;color:#fff0d1;font-weight:bold}
+.cloud-controls button:hover,#account-bar button:hover,#auth-panel button:hover{background:#5d3c1b}
+.cloud-controls button:focus-visible,#account-bar button:focus-visible,#auth-panel button:focus-visible{outline:3px solid #835019;outline-offset:3px}
+.cloud-controls button:disabled{opacity:.65;cursor:wait}
+#cloud-status{margin-top:12px;line-height:1.5;color:#3f2b1b}
+#account-bar{flex-wrap:wrap;background:#291b12;color:#f4e0b4;border-block:1px solid #b28b4e}
+@media(max-width:600px){.cloud-controls{margin:10px}.cloud-actions{display:grid}.cloud-controls button{width:100%;text-align:left}#account-bar{justify-content:flex-start}}
+
+#clairval-app{position:relative;isolation:isolate}.cloud-controls,#account-bar{z-index:2}#scenery,#scenery *{pointer-events:none!important}
+.cloud-controls h2{font-size:20px;margin:0 0 12px;color:#3f2b1b}
+</style>
 <script type="module" src="auth.mjs"></script>
 </head>
 <body>
@@ -24,7 +40,7 @@
 <noscript>Activez JavaScript pour vous connecter.</noscript></section>
 <!-- AUTH_END -->
 <div id="clairval-app" hidden>
-<section class="cloud-controls" aria-label="Sauvegarde de votre progression"><div class="cloud-actions"><button id="cloud-save" type="button">Sauvegarder en ligne</button> <button id="cloud-load" type="button">Récupérer ma sauvegarde</button> <button id="cloud-legacy" type="button">Récupérer mon ancien carnet local</button></div><p id="cloud-status" role="status" aria-live="polite"></p></section>
+<section class="cloud-controls" aria-label="Sauvegarde de votre progression"><h2>Sauvegarde du compte</h2><div class="cloud-actions"><button id="cloud-save" type="button">Sauvegarder en ligne</button> <button id="cloud-load" type="button">Récupérer ma sauvegarde</button> <button id="cloud-legacy" type="button">Récupérer mon ancien carnet local</button></div><p id="cloud-status" role="status" aria-live="polite"></p></section>
 <div id="account-bar"><span id="account-email"></span><button id="auth-logout" type="button">Se déconnecter</button></div>
 <a class="skip" href="#content">Aller au carnet</a>
 <div class="scenery" id="scenery" aria-hidden="true"></div>
