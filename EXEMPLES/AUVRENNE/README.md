@@ -20,6 +20,10 @@ La table Auvrenne utilise RLS et une fonction SECURITY INVOKER à contrôle de v
 
 ## Sources et vérification
 
+## Charte restaurée
+
+À la demande du joueur, la charte froide est remplacée par le style médiéval chaud de Clairval : décor, bois, parchemin doré, menus à miniatures, portraits et fiches de personnages. Une besace et une rubrique Inventaire rendent de nouveau les objets consultables (dague, arc court, mule, bagage léger). Le scénario, les connaissances initiales, les quantités inconnues et les sauvegardes sont conservés.
+
 Les fichiers d’application sont dans `../CLAIRVAL/dist/auvrenne-*`. Le modèle HTML principal est `../CLAIRVAL/auvrenne-index.html`. Le build conserve aussi `clairval.html` et l’export autonome Clairval.
 
 `node check-auvrenne.mjs`, `node check-autosave.mjs`, `node check-cloud.mjs`, `node check-auth.mjs`, `node check-campaign.mjs`. Les vérifications s’exécutent depuis `EXEMPLES/CLAIRVAL`.

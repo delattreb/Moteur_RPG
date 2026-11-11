@@ -140,4 +140,4 @@ L’édition en ligne propose une [synchronisation automatique par compte](EXEMP
 
 ## Auvrenne — Le passage des vivants
 
-Le [carnet préparatoire d’Auvrenne](EXEMPLES/AUVRENNE/README.md) adapte le site au royaume et à Corbec Le Varn : palette bleu nuit et ivoire, portrait, carte initiale, lore public et appel d’Alix. Aucun fait de partie n’est joué par la navigation. Les notes personnelles et repères favoris sont synchronisés séparément de Clairval. La démonstration Clairval reste accessible via `clairval.html`.
+Le [carnet préparatoire d’Auvrenne](EXEMPLES/AUVRENNE/README.md) adapte le site au royaume et à Corbec Le Varn : charte chaude de bois et de parchemin, portrait, carte initiale, lore public et appel d’Alix. Aucun fait de partie n’est joué par la navigation. Les notes personnelles et repères favoris sont synchronisés séparément de Clairval. La démonstration Clairval reste accessible via `clairval.html`.

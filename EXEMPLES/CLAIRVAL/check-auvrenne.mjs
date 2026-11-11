@@ -28,7 +28,7 @@ const document={querySelector:node,addEventListener:(name,fn)=>handlers[name]=fn
 const window={location:{hash:'#carnet'},addEventListener:(name,fn)=>handlers['window:'+name]=fn,dispatchEvent:event=>events.push(event.type)};
 const p=createJournal({document,window,user:{id:'a'},storage});
 assert.match(node('#content').innerHTML,/Le passage/);assert.ok(!node('#content').innerHTML.includes('<img src=x'));
-for(const page of ['carte','corbec','rencontres','mission','royaume','carnet']){window.location.hash='#'+page;handlers['window:hashchange']();assert.ok(node('#content').innerHTML.length>200);assert.ok(!node('#content').innerHTML.includes('undefined'));}
+for(const page of ['carte','corbec','rencontres','mission','inventaire','royaume','carnet']){window.location.hash='#'+page;handlers['window:hashchange']();assert.ok(node('#content').innerHTML.length>200);assert.ok(!node('#content').innerHTML.includes('undefined'));}
 handlers.input({target:{id:'personal-notes',value:'Question pour Alix'}});
 assert.equal(p.snapshot().notes,'Question pour Alix');assert.equal(events.at(-1),'clairval-progress-changed');
 const click=dataset=>handlers.click({target:{closest:()=>({dataset,hasAttribute:()=>false})}});
@@ -38,3 +38,10 @@ for(const name of ['auvrenne-data.mjs','auvrenne-app.mjs']){const text=fs.readFi
 const html=fs.readFileSync(new URL('./dist/index.html',import.meta.url),'utf8');
 assert.match(html,/Auvrenne/);assert.match(html,/PARTIE NON COMMENCÉE/);assert.match(html,/clairval.html/);
 console.log('Auvrenne : pages, notes échappées, favoris, état avant partie, isolation locale/cloud, restauration automatique et absence de secrets vérifiés.');
+
+window.location.hash='#inventaire';handlers['window:hashchange']();
+for(const id of ['dagger','bow','mule','pack']){assert.match(node('#content').innerHTML,new RegExp('data-object="'+id+'"'));click({object:id});assert.equal(node('#detail').open,true);assert.match(node('#detail-body').innerHTML,/Objets & équipement/);}
+for(const id of ['corbec','alix']){click({person:id});assert.match(node('#detail-body').innerHTML,/Portrait illustré/);}
+assert.equal(p.snapshot().journey.length,0);assert.equal(p.snapshot().campaign,null);
+assert.match(node('#besace').innerHTML,/Votre besace/);assert.match(node('#encounters').innerHTML,/Alix de la Noue/);
+console.log('Présentation chaude : fiches de deux personnages, quatre objets et besace illustrée vérifiées, sans modification de la campagne.');

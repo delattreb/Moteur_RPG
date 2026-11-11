@@ -33,7 +33,7 @@ sessions_jouees: 0
 | Réputation locale | Visage oublié ; quelques anciens pourraient le reconnaître |
 | Mission proposée | Escorter les patients d’Alix et plusieurs familles vers un monastère |
 | Connaissance régionale | Anciens chemins de campagne militaire ; état actuel inconnu |
-| Carnet et site | Carnet de terrain usé, croquis à l’encre ; bleu nuit, ivoire et acier, sans dominante terreuse |
+| Carnet et site | Charte médiévale chaleureuse de la version précédente : bois sombre, parchemin doré, laiton, portraits et objets illustrés |
 
 ## Un royaume qui se fracture
 
@@ -137,19 +137,20 @@ Les dés seront lancés par le joueur ou par un véritable outil de tirage. Aucu
 
 La guerre, les blessures, la peur et les compromis font partie du cadre sombre validé. Cette validation ne vaut pas accord à toutes les descriptions possibles. Par défaut de préparation, les violences sexuelles, la torture détaillée et les sévices graphiques envers les enfants restent hors champ ; toute limite supplémentaire peut être posée avant ou pendant le jeu.
 
-## Direction visuelle pour le futur site
+## Direction graphique corrigée
+
+La direction froide initiale est remplacée à la demande du joueur. Le scénario et les choix de Corbec sont conservés.
 
 | Usage | Traitement |
 | --- | --- |
-| Fond et cuir | Bleu nuit #101D35 et bleu ardoise #273D58 |
-| Pages | Ivoire #F2EDDE ; usure gris bleuté, sans sépia dominant |
-| Encre | Bleu-noir #182A42 |
-| Détails | Acier #AAB9C7, traits fins et marques manuscrites |
-| Carte | Routes en encre, rivières bleues, reliefs esquissés ; pas de château fantastique ni de symbole magique |
-| Portrait de Corbec | Homme de 46 ans, sec, cheveux courts grisonnants, barbe brève, tenue de voyage sobre |
-| Objets | Dague utilitaire, arc court, paquetage et mule ; aucun équipement héroïque ajouté |
-| Découverte | Noms connus de loin distingués des observations et des visites de campagne |
-| Accessibilité | Texte lisible indépendamment des images ; motifs décoratifs sans interception des clics |
+| Fond et encadrements | Bois sombre, cuir brun, laiton et lumière chaude, dans la continuité de l’ancienne version Clairval |
+| Pages | Parchemin doré et ivoire chaud ; bords usés et ombres douces |
+| Encre et accents | Brun sombre, ocre et or patiné |
+| Navigation | Menus à miniatures illustrées et titres sur parchemin |
+| Personnages | Portraits chaleureux de Corbec et d’Alix, ouvrant leurs fiches |
+| Objets | Besace et inventaire illustrés : dague, arc court, mule et bagage ; fiches consultables |
+| Carte | Même géographie, mêmes noms et routes ; couleurs réchauffées sans ajout de faits |
+| Accessibilité | Texte lisible, contrôles contrastés et décor n’interceptant pas les clics |
 
 ## Point d’arrêt
 

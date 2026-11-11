@@ -4,7 +4,10 @@ Versions du dépôt, classées de la plus récente à la plus ancienne. Les vers
 
 ## À venir
 
-- Adaptation préparatoire à Auvrenne : carnet bleu nuit et ivoire, portrait de Corbec, carte initiale, lore et appel d’Alix.
+- Charte d’Auvrenne restaurée dans le style chaud de la version précédente : bois, parchemin, menus illustrés, portraits et fiches de personnages.
+- Retour de la besace, de l’inventaire et de quatre fiches d’équipement, sans modifier le scénario ni les sauvegardes.
+
+- Adaptation préparatoire à Auvrenne : carnet médiéval chaleureux, portrait de Corbec, carte initiale, lore et appel d’Alix.
 - Notes et repères favoris synchronisés dans un espace de sauvegarde distinct ; la démonstration Clairval et sa sauvegarde sont conservées.
 - Aucune scène, mission acceptée ou déplacement joué créé par cette adaptation. Pas de nouvelle release pour cette étape.
 
