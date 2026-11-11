@@ -40,3 +40,6 @@ Un arrêt anticipé est une interruption de la session courante, pas une session
 
 ## Conclusion
 Préparer le dénouement avant les dernières sessions. La session 60 conclut ce qui a été joué : issue, coût, relations et devenir du personnage. Distinguer les mystères secondaires volontairement laissés ouverts d'une intrigue principale abandonnée faute de préparation. Aucun cliffhanger ne doit rendre une autre campagne obligatoire.
+
+## Continuité de campagne
+Le fonctionnement de sauvegarde automatique retenu est décrit dans SAUVEGARDE_ET_REPRISE.md. Il respecte les interruptions sans compter de nouvelle session et demeure à implémenter ; aucun service n'est activé par ce référentiel.

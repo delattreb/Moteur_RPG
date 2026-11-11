@@ -47,3 +47,6 @@ Une demande de modification rouvre les seuls points concernés. Présenter les e
 | Passage de Chat à Work | Aucun nouveau monde, compteur ou événement créé |
 
 Ce tableau est un contrôle documentaire. Il ne signifie pas que l'application ou une reprise persistante sont implémentées.
+
+## Continuité prévue
+La persistance future suit SAUVEGARDE_ET_REPRISE.md : retrouver la dernière révision valide et la décision en attente, sans rejouer. La fonction demeure non implémentée dans cette édition ; en attendant, appliquer les limites d'accès et de reprise ci-dessus.

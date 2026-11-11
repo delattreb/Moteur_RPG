@@ -3,6 +3,16 @@
 ## À venir
 Les évolutions seront décrites ici avant leur prochaine version.
 
+## 1.6.0 — 11 novembre 2026
+- Missions réparties entre En cours, Possibilités et Historique, avec modèle public vierge.
+- Guidage léger : faits connus et suggestion discrète si nécessaire, sans solution révélée.
+- Sauvegarde automatique prévue à chaque fin de session et interruption détectée.
+- Révision vérifiée, état MJ séparé, projection publique et résumé de reprise.
+- Interruptions sans progression fictive ; réparations sans rejouer ni compter deux fois.
+- Échecs d'enregistrement et de publication distingués explicitement.
+
+Validation documentaire : liens internes et cohérence des références. Aucune sauvegarde réelle ajoutée ; persistance, site et reprise automatique non implémentés. Mise à jour de main sans nouvelle release GitHub.
+
 ## 1.5.0 — 11 novembre 2026
 - Présentation validée : galerie de portraits ouvrant les pages individuelles du carnet.
 - Identité connue, rencontres, relation observable, affaires en cours et dernière nouvelle.

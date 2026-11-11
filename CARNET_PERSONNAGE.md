@@ -46,3 +46,6 @@ Ces contrôles restent à effectuer sur un site construit. Aucun système de pro
 
 ## Répertoire des rencontres
 La galerie de portraits ouvre les pages individuelles définies dans PNJ_ET_RELATIONS.md. Les affaires communes renvoient aux engagements connus du personnage. Utiliser MODELES/PNJ_PUBLIC.md pour les pages publiques, sans divulguer les fiches privées des acteurs.
+
+## Missions et reprise
+Intégrer les onglets En cours, Possibilités et Historique selon MISSIONS_ET_GUIDAGE.md. Le résumé public de SAUVEGARDE_ET_REPRISE.md expose les changements, l'objectif courant et la décision en attente, sans secrets. Aucun enregistrement automatique n'est actuellement implémenté.

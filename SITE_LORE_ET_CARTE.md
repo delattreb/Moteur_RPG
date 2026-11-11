@@ -42,3 +42,6 @@ Le site comprend aussi le carnet personnel illustré défini dans CARNET_PERSONN
 
 ## Galerie de PNJ et relations
 Intégrer la galerie et les pages individuelles selon PNJ_ET_RELATIONS.md, avec MODELES/PNJ_PUBLIC.md. Les personnes rencontrées sont illustrées selon les références connues ; les personnes seulement évoquées portent le statut « connue de nom ». Les relations et dernières nouvelles restent observables, sans position actuelle ni loyauté omnisciente. Cette intégration reste à implémenter.
+
+## Missions et résumé de reprise
+Prévoir les pages de MISSIONS_ET_GUIDAGE.md et le résumé public défini dans SAUVEGARDE_ET_REPRISE.md. Le site ne reçoit jamais les sources MJ. La validité d'une sauvegarde et l'actualisation du site sont vérifiées séparément. Ces fonctions restent à implémenter.

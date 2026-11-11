@@ -71,3 +71,6 @@ Le format retenu est de 60 sessions de 10 à 15 minutes, deux par jour réel jou
 
 ## 9. Construction du scénario
 Appliquer CONSTRUIRE_UNE_CAMPAGNE.md. Préparer conflit, acteurs actifs, branches et issues possibles. Les choix doivent modifier les conditions des situations suivantes ; rejoindre une scène commune n'efface ni engagements, ni coûts, ni relations. Les intrigues secondaires restent facultatives. Un exemple préparé n'est pas un scénario validé en partie.
+
+## 10. Missions et continuité
+Le suivi des missions suit MISSIONS_ET_GUIDAGE.md avec guidage léger. La sauvegarde automatique à la fin de session et sur interruption est retenue selon SAUVEGARDE_ET_REPRISE.md ; elle reste à implémenter. Les anciennes mentions d'absence de persistance décrivent l'état actuel de cette édition, pas un refus de cette fonction future.
