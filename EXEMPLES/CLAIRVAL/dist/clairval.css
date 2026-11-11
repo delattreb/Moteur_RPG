@@ -25,3 +25,16 @@ dialog{width:min(720px,calc(100% - 28px));max-height:90vh;overflow:auto;padding:
 @media(max-width:650px){.campaign-inventory{grid-template-columns:1fr}.campaign-inventory h3{font-size:24px}}
 .character-state{margin-top:28px;padding-top:25px;border-top:1px solid #ab814666;overflow-wrap:anywhere}.character-state>h3{font-size:29px;font-weight:normal}.character-state .lead{margin:10px 0 20px}.condition-category{font-size:23px;font-weight:normal;margin:22px 0 12px}.condition-card{padding:18px;margin:12px 0;border:1px solid #ab8146;background:#f2ddb233}.condition-card h4{font-size:22px;font-weight:normal;margin:0 0 12px}.condition-card p,.condition-card li{font-size:15px;line-height:1.7}.condition-card p{margin:12px 0}.condition-card ul{padding-left:20px}.condition-card details{margin-top:16px;padding-top:12px;border-top:1px solid #ab814644}.condition-card summary,.condition-history>summary{cursor:pointer;line-height:1.6}.condition-history{margin:18px 0;padding:14px;border:1px solid #ab814666}.condition-card small,.condition-history small{color:#77552e}
 .campaign-transfer-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:18px 0}.campaign-transfer-actions .gold-button{font-size:16px}#campaign-file{display:block;width:100%;max-width:100%;margin:12px 0 20px;padding:10px;color:#49301d;background:#f2deba;border:1px solid #a68047}#campaign-file-preview{margin:12px 0 20px;overflow-wrap:anywhere}.prose .gold-button[download]{max-width:100%;overflow-wrap:anywhere}
+
+/* Decorative scenery must never intercept account or save controls. */
+.scenery,.scenery::after{pointer-events:none}
+.cloud-controls,#account-bar,#auth-panel{position:relative;z-index:1}
+.cloud-controls{margin:12px 22px;padding:16px;max-width:1756px;background:#ebd1a0;color:#3f2b1b;border:1px solid #b28b4e;border-radius:5px;box-shadow:0 4px 14px #0007}
+.cloud-actions{display:flex;flex-wrap:wrap;gap:10px}
+.cloud-controls button,#account-bar button,#auth-panel button{min-height:44px;padding:10px 16px;border:1px solid #d3aa60;border-radius:4px;background:#392514;color:#fff0d1;font-weight:bold}
+.cloud-controls button:hover,#account-bar button:hover,#auth-panel button:hover{background:#5d3c1b}
+.cloud-controls button:focus-visible,#account-bar button:focus-visible,#auth-panel button:focus-visible{outline:3px solid #835019;outline-offset:3px}
+.cloud-controls button:disabled{opacity:.65;cursor:wait}
+#cloud-status{margin-top:12px;line-height:1.5;color:#3f2b1b}
+#account-bar{flex-wrap:wrap;background:#291b12;color:#f4e0b4;border-block:1px solid #b28b4e}
+@media(max-width:600px){.cloud-controls{margin:10px}.cloud-actions{display:grid}.cloud-controls button{width:100%;text-align:left}#account-bar{justify-content:flex-start}}
