@@ -45,7 +45,8 @@ function showPerson(id){if(mapMode==='campaign')return;const person=people.find(
 const routes=[['vaucombe','forest'],['vaucombe','tower'],['vaucombe','moulin'],['forest','clairiere'],['forest','valestre'],['moulin','pierrefont']];
 const bearings={forest:'Vers la lisière du bois',tower:'Vers les hauteurs',moulin:'Suivre la rive au sud',vaucombe:'Revenir au bourg',clairiere:'Suivre le sentier forestier',valestre:'Prendre la route de l’ouest',pierrefont:'Descendre le cours de l’Aronde'};
 const discoveries={forest:'Vous atteignez la lisière : une pierre gravée marque le départ du sentier. Le sous-bois profond demeure inconnu.',tower:'Au pied de la tour, les murs éventrés dominent le chemin. Vous restez dehors : son intérieur attend une décision.',moulin:'La rive vous conduit jusqu’au moulin de l’Aronde. Vous observez sa roue depuis le chemin.',clairiere:'Le sentier débouche dans une clairière bordée de grands arbres. Vous faites halte à son entrée.',valestre:'La route de l’ouest rejoint les premières maisons de Valestre.',pierrefont:'En suivant l’Aronde, vous parvenez aux abords de Pierrefont.'};
-const travelKey='clairval.exploration.v1';
+const accountSuffix=window.CLAIRVAL_USER_ID?'.'+window.CLAIRVAL_USER_ID:'';
+const travelKey='clairval.exploration.v1'+accountSuffix;
 let storageMessage='',journey=['vaucombe'];
 const adjacent=(a,b)=>routes.some(([x,y])=>(a===x&&b===y)||(a===y&&b===x));
 function restoreJourney(){
@@ -57,7 +58,7 @@ function restoreJourney(){
 }
 restoreJourney();
 // Projection publique de campagne : aucun état privé du MJ ne doit être importé ici.
-const campaignKey='clairval.campaign.v1';
+const campaignKey='clairval.campaign.v1'+accountSuffix;
 let mapMode='free',campaign=null,campaignMessage='';
 const exactKeys=(value,keys)=>value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).length===keys.length&&keys.every(k=>Object.hasOwn(value,k));
 const boundedText=(value,max)=>typeof value==='string'&&value.trim().length>0&&value.length<=max;
@@ -352,3 +353,27 @@ window.addEventListener('pagehide',()=>{importReadSequence++;importBusy=false;di
 dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
 window.addEventListener('hashchange',()=>{render();main.focus({preventScroll:true});});
 init();
+
+if(window.CLAIRVAL_USER_ID){
+ window.CLAIRVAL_PROGRESS={
+  snapshot(){return JSON.parse(JSON.stringify({version:1,journey,campaign}));},
+  validate(value){
+   if(!value||value.version!==1||!Array.isArray(value.journey)||value.journey.length<1||value.journey.length>10000||value.journey[0]!=='vaucombe'||value.journey.some((id,i)=>!locations.some(p=>p.id===id)||(i>0&&!adjacent(value.journey[i-1],id))))throw Error('Sauvegarde invalide.');
+   return {version:1,journey:[...value.journey],campaign:value.campaign===null?null:validateCampaign(value.campaign)};
+  },
+  apply(value){
+   const next=this.validate(value);
+   const writes=[[travelKey,JSON.stringify({version:1,journey:next.journey})],[campaignKey,next.campaign?JSON.stringify(next.campaign):null]];
+   const previous=writes.map(([key])=>[key,window.localStorage.getItem(key)]);
+   try{
+    for(const [key,value] of writes){if(value===null)window.localStorage.removeItem(key);else window.localStorage.setItem(key,value);if(window.localStorage.getItem(key)!==value)throw Error('readback');}
+   }catch(error){for(const [key,value] of previous){try{if(value===null)window.localStorage.removeItem(key);else window.localStorage.setItem(key,value);}catch{}}throw Error('Stockage local inaccessible. La progression affichée est conservée.');}
+   journey=next.journey;campaign=next.campaign;mapMode=campaign?'campaign':'free';campaignMessage='Sauvegarde récupérée et vérifiée dans ce navigateur.';render();
+  },
+  legacy(){
+   const raw=window.localStorage.getItem('clairval.exploration.v1'),saved=window.localStorage.getItem('clairval.campaign.v1');
+   if(!raw&&!saved)return null;
+   return this.validate({version:1,journey:raw?JSON.parse(raw).journey:['vaucombe'],campaign:saved?JSON.parse(saved):null});
+  }
+ };
+}

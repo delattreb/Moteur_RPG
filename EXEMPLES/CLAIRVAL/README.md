@@ -7,7 +7,7 @@ Carte centrale sur parchemin, six rubriques illustrées, portraits de Ysilde, Ga
 Construction : `node build-clairval.mjs`.
 Vérification : `node check-clairval.mjs`.
 
-Illustration dans `dist/assets/medieval-art.webp`, intégrée au fichier autonome. Aucun accès Drive, sauvegarde de campagne ou secret MJ. La découverte progressive fonctionne dans le parcours libre décrit ci-dessous. La synchronisation des sauvegardes de campagne et la publication automatique restent à implémenter.
+Illustration dans `dist/assets/medieval-art.webp`, intégrée au fichier autonome. Aucun accès Drive, sauvegarde de campagne ou secret MJ. La découverte progressive fonctionne dans le parcours libre décrit ci-dessous. Le transfert manuel des progressions publiques via Supabase est disponible dans l’édition en ligne ; la sauvegarde privée du MJ et la synchronisation automatique restent à implémenter.
 
 Distribution légère : illustration WebP unique, fichiers HTML/CSS/JS séparés ; PNG source et HTML autonome exclus du dépôt.
 
@@ -35,4 +35,4 @@ L’**export et la reprise** permettent de télécharger cette progression publi
 
 ## Connexion du site en ligne
 
-Le site `dist/index.html` utilise désormais Supabase Auth avant l’ouverture du carnet. Voir [la configuration et les limites de protection](AUTH_SUPABASE.md). Les sauvegardes restent locales. L’export HTML autonome reste une démonstration hors ligne sans authentification.
+Le site `dist/index.html` utilise désormais Supabase Auth avant l’ouverture du carnet. Voir [la configuration et les limites de protection](AUTH_SUPABASE.md). La [sauvegarde manuelle Supabase](SAUVEGARDE_CLOUD.md) permet de transférer le parcours et la projection publique entre appareils. L’export HTML autonome reste une démonstration hors ligne sans authentification.

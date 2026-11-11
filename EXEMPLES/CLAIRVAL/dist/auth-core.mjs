@@ -1,7 +1,7 @@
 export async function startAuth({createClient, document, window, loadGame}) {
  const client=createClient('https://rtfcqbzqoledtteirzer.supabase.co','sb_publishable_C_pcI1fZTrWSHayZmFsImg_IlxOo7Qt');
  const panel=document.querySelector('#auth-panel'), app=document.querySelector('#clairval-app'), status=document.querySelector('#auth-status'), form=document.querySelector('#auth-form');
- let loaded=false, generation=0;
+ let loaded=false, generation=0, loadedUser=null, loading=null;
  const message=text=>{status.textContent=text;};
  function lock(){app.hidden=true;panel.hidden=false;document.querySelector('#detail')?.close();}
  async function verify(){
@@ -11,7 +11,8 @@ export async function startAuth({createClient, document, window, loadGame}) {
    const {data,error}=await client.auth.getUser();
    if(revision!==generation)return;
    if(error||!data.user){message('Connectez-vous pour ouvrir votre carnet.');return;}
-   if(!loaded){await loadGame();loaded=true;}
+   if(loadedUser&&loadedUser!==data.user.id){window.location.reload();return;}
+   if(!loaded){if(!loading){loadedUser=data.user.id;loading=loadGame({client,user:data.user}).catch(error=>{loading=null;loadedUser=null;throw error;});}await loading;loaded=true;}
    if(revision!==generation)return;
    panel.hidden=true;app.hidden=false;
    document.querySelector('#account-email').textContent=data.user.email||'Compte connecté';

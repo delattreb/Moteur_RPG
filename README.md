@@ -132,3 +132,7 @@ Le format public 3 relie aussi les missions et l’[inventaire de campagne](EXEM
 Le format public 4 ajoute l’[état du personnage](EXEMPLES/CLAIRVAL/ETAT_PERSONNAGE.md) dans le carnet : blessures, fatigue et effets temporaires, avec conséquences narratives et récupérations confirmées. Aucun score ni rétablissement automatique n’est ajouté.
 
 L’[export et la reprise de progression](EXEMPLES/CLAIRVAL/EXPORT_ET_REPRISE.md) permettent de transférer la projection publique vers un autre navigateur : fichier JSON, aperçu avant intégration et retour au carnet. Cette fonction conserve le format existant et ne remplace pas la sauvegarde privée du MJ.
+
+## Sauvegarde en ligne — Supabase
+
+L’édition en ligne propose désormais une [sauvegarde manuelle par compte](EXEMPLES/CLAIRVAL/SAUVEGARDE_CLOUD.md) du parcours libre et de la projection publique de campagne. Envoyer depuis le premier appareil, puis récupérer sur le suivant. Les remplacements demandent confirmation ; les écritures concurrentes sont refusées. L’export JSON et l’édition autonome restent disponibles.
