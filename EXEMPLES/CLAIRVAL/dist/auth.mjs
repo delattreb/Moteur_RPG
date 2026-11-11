@@ -1,11 +1,11 @@
 import {startAuth} from './auth-core.mjs';
-import {mountCloud} from './cloud-sync.mjs';
+import {mountCloud} from './cloud-sync.mjs?v=autosave-1';
 try {
  const {createClient}=await import('https://esm.sh/@supabase/supabase-js@2.49.8');
  await startAuth({createClient,document,window,loadGame:async({client,user})=>{
  window.CLAIRVAL_USER_ID=user.id;
  await new Promise((resolve,reject)=>{
-  const script=document.createElement('script');script.src='clairval.js';script.onload=resolve;script.onerror=reject;document.body.append(script);
+  const script=document.createElement('script');script.src='clairval.js?v=autosave-1';script.onload=resolve;script.onerror=reject;document.body.append(script);
  });
  await mountCloud({client,user,document,window,progress:window.CLAIRVAL_PROGRESS});
  }});

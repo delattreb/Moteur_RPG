@@ -133,6 +133,6 @@ Le format public 4 ajoute l’[état du personnage](EXEMPLES/CLAIRVAL/ETAT_PERSO
 
 L’[export et la reprise de progression](EXEMPLES/CLAIRVAL/EXPORT_ET_REPRISE.md) permettent de transférer la projection publique vers un autre navigateur : fichier JSON, aperçu avant intégration et retour au carnet. Cette fonction conserve le format existant et ne remplace pas la sauvegarde privée du MJ.
 
-## Sauvegarde en ligne — Supabase
+## Sauvegarde automatique — Supabase
 
-L’édition en ligne propose désormais une [sauvegarde manuelle par compte](EXEMPLES/CLAIRVAL/SAUVEGARDE_CLOUD.md) du parcours libre et de la projection publique de campagne. Envoyer depuis le premier appareil, puis récupérer sur le suivant. Les remplacements demandent confirmation ; les écritures concurrentes sont refusées. L’export JSON et l’édition autonome restent disponibles.
+L’édition en ligne propose une [synchronisation automatique par compte](EXEMPLES/CLAIRVAL/SAUVEGARDE_CLOUD.md) du parcours libre et de la projection publique de campagne. Les modifications locales sont envoyées et la copie en ligne est récupérée à l’ouverture ou au retour sur l’onglet. Une divergence suspend le transfert et demande de choisir la copie à conserver. Les commandes manuelles, l’export JSON et l’édition autonome restent disponibles.

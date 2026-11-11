@@ -184,7 +184,7 @@ function importCampaign(raw){
   try{previous=window.localStorage.getItem(campaignKey);}catch{throw Error('Stockage du navigateur inaccessible. Aucune mise à jour intégrée ; gardez le JSON pour réessayer.');}
   try{window.localStorage.setItem(campaignKey,encoded);if(window.localStorage.getItem(campaignKey)!==encoded)throw Error('lecture');}
   catch{try{if(previous===null)window.localStorage.removeItem(campaignKey);else window.localStorage.setItem(campaignKey,previous);}catch{}throw Error('Enregistrement non vérifié. La carte affichée reste sur la dernière révision intégrée. Gardez votre mise à jour pour réessayer.');}
-  campaign=data;campaignMessage=`Révision ${data.revision} intégrée et relue dans ce navigateur.`;return true;
+  campaign=data;if(window.CLAIRVAL_USER_ID&&window.dispatchEvent)window.dispatchEvent(new Event('clairval-progress-changed'));campaignMessage=`Révision ${data.revision} intégrée et relue dans ce navigateur.`;return true;
  }catch(error){campaignMessage=error instanceof SyntaxError?'Le texte n’est pas un JSON valide. La carte actuelle est conservée.':error.message;return false;}
 }
 function campaignResume(data=campaign){
@@ -270,7 +270,7 @@ const activeJourney=()=>mapMode==='campaign'?campaignJourney():journey;
 const currentPlace=()=>activeJourney().at(-1);
 const discovered=id=>activeJourney().includes(id);
 let freeEncounters='',freeBesace='';
-function persistJourney(){try{const raw=JSON.stringify({version:1,journey});window.localStorage.setItem(travelKey,raw);if(window.localStorage.getItem(travelKey)!==raw)throw Error('readback');storageMessage='';}catch{storageMessage='Enregistrement impossible : vos déplacements restent disponibles seulement dans cette page ouverte.';}}
+function persistJourney(){try{const raw=JSON.stringify({version:1,journey});window.localStorage.setItem(travelKey,raw);if(window.localStorage.getItem(travelKey)!==raw)throw Error('readback');storageMessage='';if(window.CLAIRVAL_USER_ID&&window.dispatchEvent)window.dispatchEvent(new Event('clairval-progress-changed'));}catch{storageMessage='Enregistrement impossible : vos déplacements restent disponibles seulement dans cette page ouverte.';}}
 function travelTo(id){if(mapMode!=='free')return;if(!adjacent(currentPlace(),id)||journey.length>=10000)return;journey.push(id);persistJourney();dialog.close();render();showLocation(id);}
 function showLocation(id){
  const place=locations.find(x=>x.id===id);if(!place||!discovered(id))return;

@@ -1,27 +1,37 @@
-# Sauvegarde Supabase de Clairval
+# Sauvegarde automatique Supabase de Clairval
 
-## Utilisation
+La synchronisation concerne le parcours libre et la projection publique de campagne (missions, inventaire, état narratif, reprise). Elle ne transfère ni la conversation ni les secrets du MJ.
 
-La synchronisation est **manuelle** et conserve une sauvegarde par compte, avec le parcours libre et la projection publique de campagne (missions, inventaire, état narratif, reprise). Les secrets du MJ et la conversation ne sont pas synchronisés.
+## Usage
 
-- Sur l'appareil où se trouve la progression : cliquer **Sauvegarder en ligne** et attendre « Sauvegarde en ligne vérifiée ».
-- Sur un autre appareil : se connecter au même compte et cliquer **Récupérer ma sauvegarde**. Une confirmation précède le remplacement de la progression locale.
-- Après la première mise à jour, cliquer **Récupérer mon ancien carnet local** si la progression venait de l'ancienne version du site, puis la sauvegarder en ligne. Cet import demande confirmation et ne supprime pas l'ancienne copie.
-- Conserver l'export JSON de campagne si l'on veut garder plusieurs versions. Une seule version en ligne est disponible par compte ; il n'y a pas encore d'historique ni de fusion automatique.
+Après connexion, le site compare les copies locale et en ligne. Sur un nouvel appareil sans progression, il récupère la sauvegarde automatiquement. Un déplacement libre ou un import de campagne déclenche un envoi après 800 ms sans nouvelle modification. Au retour sur l'onglet ou du réseau, le site vérifie à nouveau la sauvegarde.
 
-Les boutons demandent confirmation quand les deux copies diffèrent. Le serveur refuse une écriture si un autre appareil a enregistré entre la lecture et l'envoi. Le refus ou une panne réseau ne remplace pas la progression locale. Ne pas quitter l'appareil avant le message de vérification.
+Attendre le message **Sauvegarde automatique en ligne vérifiée** ou **Synchronisation automatique vérifiée** avant de fermer l'appareil. Si l'envoi n'est pas terminé, le navigateur peut demander confirmation avant de quitter la page. La fermeture forcée ne garantit pas l'envoi ; la copie locale est conservée.
+
+La reprise après rechargement s'appuie sur une empreinte SHA-256 de la dernière version acceptée, conservée par compte dans le navigateur. Si le suivi est absent et que deux copies non vides diffèrent, aucun choix n'est fait automatiquement.
+
+## Conflits et commandes manuelles
+
+Si les copies ont toutes les deux changé depuis leur version commune, le site suspend la synchronisation. Il ne fusionne pas les événements et n'écrase aucune copie automatiquement.
+
+- **Sauvegarder en ligne** : conserver la progression de cet appareil ; un remplacement différent demande confirmation.
+- **Récupérer ma sauvegarde** : conserver la copie en ligne et remplacer la locale après confirmation.
+- **Récupérer mon ancien carnet local** : rattacher, après confirmation, les données de l'ancienne version au compte actuel. La synchronisation reprend ensuite.
+
+Un choix manuel accepté réactive la synchronisation. L'export JSON permet de conserver séparément plusieurs versions de campagne. Une seule sauvegarde en ligne est conservée par compte, sans historique cloud. Il n'y a pas de surveillance permanente : la récupération se fait à l'ouverture et au retour sur l'onglet ; une écriture concurrente déclenche un conflit.
 
 ## Accès et stockage
 
-La table `public.clairval_saves` possède RLS : lecture, insertion et mise à jour limitées au propriétaire par `auth.uid() = user_id`. Aucun accès anonyme ni suppression via l'API. La fonction `save_clairval` est SECURITY INVOKER, reçoit une version attendue et effectue une écriture atomique. Les données sont limitées à 6 Mo en base.
+La table `public.clairval_saves` utilise RLS : accès limité au propriétaire par `auth.uid() = user_id`. Aucun accès anonyme ni suppression via l'API. La fonction `save_clairval` est SECURITY INVOKER et vérifie atomiquement la version attendue. La taille est limitée à 6 Mo en base.
 
-Les caches locaux de l'édition en ligne sont séparés par identifiant de compte. Le navigateur garde ses copies après déconnexion : utiliser un appareil de confiance ou effacer ses données sur un appareil partagé. Cette séparation ne constitue pas un chiffrement du stockage local. L'édition autonome hors ligne conserve ses clés historiques.
+Les caches et l'empreinte de synchronisation sont séparés par compte. Les copies locales restent après déconnexion et ne sont pas chiffrées. L'édition autonome hors ligne conserve son fonctionnement local.
 
-Le SQL de référence appliqué via la migration Supabase `clairval_account_saves` est conservé dans `sql/clairval-account-saves.sql`. Il ne doit pas être réexécuté sur une base où cette migration est déjà présente.
+Le SQL de référence appliqué par la migration `clairval_account_saves` reste dans `sql/clairval-account-saves.sql` ; ne pas le réexécuter sur une base déjà migrée.
 
 ## Vérification
 
-`node check-cloud.mjs`, `node check-auth.mjs` et `node check-campaign.mjs`.
-Les tests JavaScript simulent le réseau ; les tests SQL ont également exercé les rôles authenticated/anon, deux comptes fictifs, le refus des accès croisés et le conflit de version dans une transaction annulée. Aucun compte fictif ni sauvegarde de test n'est conservé.
+`node check-autosave.mjs`, `node check-cloud.mjs`, `node check-auth.mjs` et `node check-campaign.mjs`.
 
-Après déploiement, vérifier un transfert réel entre deux navigateurs avec le même compte.
+Tests automatisés avec réseau simulé : récupération, envoi, rechargement, reprise réseau, conflits, changements pendant l'envoi, arrêt de session et commandes manuelles. Les politiques RLS et le conflit de version ont également été testés en base lors de l'intégration manuelle. Le transfert manuel réel a été confirmé sur deux appareils.
+
+Après publication de cette évolution, le transfert **automatique** réel reste à vérifier sur les deux appareils.

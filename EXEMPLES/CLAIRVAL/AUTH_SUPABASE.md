@@ -15,7 +15,7 @@ Dans Authentication > URL Configuration, régler Site URL sur l'adresse finale d
 
 Il s'agit d'une protection de navigation côté navigateur. HTML, JavaScript, illustrations et démonstration restent publics dans ce dépôt et peuvent être téléchargés directement. Le site statique ne peut pas protéger ces fichiers côté serveur. Aucun secret MJ ou document privé ne doit y être ajouté.
 
-La [sauvegarde manuelle par compte](SAUVEGARDE_CLOUD.md) utilise désormais la table clairval_saves et des politiques RLS limitant chaque ligne à son propriétaire. Se connecter seul ne transfère pas la progression : utiliser Sauvegarder en ligne puis Récupérer ma sauvegarde. Les secrets du MJ restent hors de cette projection.
+La [synchronisation automatique par compte](SAUVEGARDE_CLOUD.md) utilise désormais la table clairval_saves et des politiques RLS limitant chaque ligne à son propriétaire. Après connexion, le site compare les copies et les synchronise automatiquement si leur continuité est établie ; sinon il demande un choix. Les boutons manuels restent disponibles. Les secrets du MJ restent hors de cette projection.
 
 L'export `Clairval-site-medieval.html` généré par `node build-clairval.mjs` reste une démonstration publique hors ligne, sans Auth. Il utilise `clairval-offline-index.html`. Le build conserve l'écran Auth dans `dist/index.html`.
 
