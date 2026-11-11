@@ -1,0 +1,11 @@
+# Données de partie et fichiers de travail
+sauvegardes/
+campagnes/
+archives/
+prive/
+*.tmp
+*.bak
+__pycache__/
+.env
+.env.*
+!.env.example
