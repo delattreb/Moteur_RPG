@@ -2,7 +2,7 @@
 
 Versions du dépôt, classées de la plus récente à la plus ancienne. Les versions 1.3.1 à 1.7.0 étaient documentées sur main sans release GitHub dédiée.
 
-## À venir
+## 1.10.0 — 11 novembre 2026
 
 - Auvrenne : statut de synchronisation toujours visible, commandes manuelles regroupées dans « Options de sauvegarde », replié par défaut ; formulaire de séance signalé comme solution de secours pour éviter de recopier une séance déjà enregistrée depuis le chat.
 

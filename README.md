@@ -1,8 +1,12 @@
 # Moteur RPG
 
-**Version du dépôt : 1.9.0** — [Première release : 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0)
+**Version du dépôt : 1.10.0** — [Première release : 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0)
 
 Moteur de jeu de rôle narratif pour un joueur et un maître du jeu humain ou assistant. Il fournit les règles et les modèles pour créer un univers, préparer une campagne et faire évoluer l'histoire selon les décisions du joueur. Cette édition est un référentiel utilisable en conversation ; elle comprend une démonstration statique du site Clairval.
+
+## Auvrenne — version 1.10.0
+
+Carnet médiéval illustré, carte et fiches de personnages et d’équipement, journal des séances et sauvegarde directe depuis le chat avec le connecteur Supabase. Voir [les notes de version](RELEASE_NOTES.md) et [le protocole de sauvegarde Auvrenne](EXEMPLES/AUVRENNE/SAUVEGARDE_CHAT.md). Les notes précisent les limites de la synchronisation et du suivi des ressources.
 
 ## Une campagne de trente jours
 
