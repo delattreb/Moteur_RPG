@@ -4,6 +4,9 @@ Versions du dépôt, classées de la plus récente à la plus ancienne. Les vers
 
 ## À venir
 
+- Auvrenne : statut de synchronisation toujours visible, commandes manuelles regroupées dans « Options de sauvegarde », replié par défaut ; formulaire de séance signalé comme solution de secours pour éviter de recopier une séance déjà enregistrée depuis le chat.
+
+
 - Auvrenne : fonction serveur record_auvrenne_session pour enregistrer depuis le chat une séance réellement jouée, sans recopie sur le site. Contrôle de version, protection contre les doublons et conservation des notes et favoris.
 - Protocole de fin de séance et documentation du chat mis à jour ; tests SQL reproductibles en transaction annulée. L’accès au connecteur reste nécessaire dans le chat de jeu.
 

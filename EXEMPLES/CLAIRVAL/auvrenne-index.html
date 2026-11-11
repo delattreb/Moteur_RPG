@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#2d1d12">
 <meta name="description" content="Auvrenne — Le passage des vivants. Le carnet de Corbec Le Varn, mercenaire dans un royaume en guerre.">
 <title>Auvrenne · Le passage des vivants</title>
-<link rel="stylesheet" href="auvrenne.css?v=play-1">
-<script type="module" src="auvrenne-auth.mjs?v=labels-1"></script>
+<link rel="stylesheet" href="auvrenne.css?v=save-options-1">
+<script type="module" src="auvrenne-auth.mjs?v=save-options-1"></script>
 </head><body>
 <a class="skip" href="#content">Aller au carnet</a>
 <section id="auth-panel" aria-labelledby="auth-title">
@@ -22,7 +22,17 @@
 <div id="clairval-app" hidden>
 <div class="scenery" aria-hidden="true"><svg class="art" viewBox="0 0 362 362" preserveAspectRatio="xMidYMid slice"><image href="assets/medieval-art.webp" width="1448" height="1086"/></svg></div>
 <div class="topline"><a class="seal" href="#carnet">Auvrenne</a><div id="account-bar" class="account"><span id="account-email"></span><button id="auth-logout" type="button">Se déconnecter</button></div></div>
-<section class="sync-panel" aria-label="Sauvegarde du carnet"><div class="sync-head"><span class="sync-dot" aria-hidden="true"></span><span class="sync-title">Sauvegarde automatique · Auvrenne</span></div><p id="cloud-status" role="status" aria-live="polite">Chargement de la sauvegarde…</p><div class="sync-actions"><button id="cloud-save" type="button">Sauvegarder en ligne</button><button id="cloud-load" type="button" class="secondary">Récupérer ma sauvegarde</button><button id="cloud-legacy" hidden type="button">Récupérer mon ancien carnet local</button></div></section>
+<section class="sync-panel" aria-label="Sauvegarde du carnet">
+<div class="sync-head"><span class="sync-dot" aria-hidden="true"></span><span class="sync-title">Sauvegarde automatique · Auvrenne</span></div>
+<p id="cloud-status" role="status" aria-live="polite">Chargement de la sauvegarde…</p>
+<details class="save-options">
+<summary>Options de sauvegarde</summary>
+<p>Commandes de secours en cas de problème de synchronisation. Elles concernent le carnet affiché sur cet appareil.</p>
+<div class="sync-actions"><button id="cloud-save" type="button">Sauvegarder en ligne</button><button id="cloud-load" type="button" class="secondary">Récupérer ma sauvegarde</button><button id="cloud-legacy" hidden type="button">Récupérer mon ancien carnet local</button></div>
+<a class="manual-save-link" href="#carnet">Saisie manuelle d’une séance : ouvrir le carnet</a>
+<p class="micro">Ne saisis pas une séance déjà sauvegardée depuis le chat.</p>
+</details>
+</section>
 <header class="masthead"><a class="identity" href="#carnet"><span class="banner" aria-hidden="true">♜</span><span><h1>Les chroniques d’Auvrenne</h1><p>Le carnet de Corbec Le Varn</p></span></a><div class="day">Printemps · Avant la première scène</div></header>
 <div class="layout">
 <nav class="navigation wood-frame" id="navigation" aria-label="Pages du carnet"></nav>
@@ -33,3 +43,4 @@
 <footer class="footer"><span>Auvrenne · PARTIE NON COMMENCÉE · Aucun chemin encore parcouru.</span><a href="clairval.html">Retrouver la démonstration Clairval</a></footer>
 <dialog id="detail" aria-labelledby="detail-title"><button class="close" data-close type="button" aria-label="Fermer la fiche">×</button><div id="detail-body"></div></dialog>
 </div></body></html>
+
