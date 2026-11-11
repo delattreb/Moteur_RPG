@@ -6,6 +6,19 @@ Versions du dépôt, classées de la plus récente à la plus ancienne. Les vers
 
 Aucune évolution supplémentaire annoncée.
 
+## 1.9.0 — 11 novembre 2026
+
+- Supabase Auth : inscription, confirmation par e-mail, connexion et déconnexion ; accès au carnet après vérification de session.
+- Sauvegarde par compte du parcours et de la projection publique, avec RLS et contrôle atomique de version.
+- Synchronisation automatique après modification, récupération à l’ouverture et au retour sur l’onglet, reprise réseau.
+- Divergences conservées sans écrasement automatique ; commandes de choix manuel et import de l’ancien carnet.
+- Cache local séparé par compte ; export autonome hors ligne conservé.
+- Hébergement GitHub Pages par workflow manuel ; correction de la superposition du décor et du contraste des commandes.
+
+Validation : tests Auth, cloud, synchronisation et campagne réussis ; RLS et concurrence testées en base. Le joueur a confirmé la connexion et les transferts manuel puis automatique sur deux appareils.
+
+Limites : une sauvegarde cloud sans historique, pas de fusion automatique ni de synchronisation de la conversation ou des secrets du MJ. La récupération se fait à l’ouverture et au retour sur l’onglet.
+
 ## 1.8.0 - 11 novembre 2026
 - Carte explorable depuis Vaucombe : sept lieux, chemins parcourus, position et progression locale.
 - Mode campagne séparé du parcours libre, alimenté par les faits publics confirmés importés en fin de session.

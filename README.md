@@ -1,6 +1,6 @@
 # Moteur RPG
 
-**Version du dépôt : 1.7.0** — [Première release : 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0)
+**Version du dépôt : 1.9.0** — [Première release : 1.3.0](https://github.com/delattreb/Moteur_RPG/releases/tag/1.3.0)
 
 Moteur de jeu de rôle narratif pour un joueur et un maître du jeu humain ou assistant. Il fournit les règles et les modèles pour créer un univers, préparer une campagne et faire évoluer l'histoire selon les décisions du joueur. Cette édition est un référentiel utilisable en conversation ; elle comprend une démonstration statique du site Clairval.
 
@@ -100,6 +100,7 @@ Les modèles et notes d'exemple destinés au MJ restent privés. Seuls les conte
 
 | Version | Évolution |
 | --- | --- |
+| 1.9.0 | Connexion Supabase, sauvegardes par compte et synchronisation automatique entre appareils |
 | 1.8.0 | Carte explorable, campagne publique, missions, inventaire, état narratif et export / reprise |
 | 1.7.0 | Démonstration médiévale Clairval, interactions et distribution WebP allégée |
 | 1.6.0 | Missions à guidage léger et sauvegarde automatique : spécifications |
