@@ -3,6 +3,15 @@
 ## À venir
 Les évolutions seront décrites ici avant leur prochaine version.
 
+## 1.2.0 — 11 novembre 2026
+- Cadre choisi : 60 sessions de 10 à 15 minutes, deux par jour réel joué et par journée fictive.
+- Architecture sur trente jours fictifs, dénouement et épilogue préparés.
+- Détail limité aux deux prochaines sessions, réévaluation tous les cinq jours fictifs.
+- Absences et interruptions sans consommation automatique de temps fictif.
+- Préservation des choix aux transitions ; aucun remplissage pour tenir le calendrier.
+
+Validation documentaire et contrôle du découpage des soixante sessions. Campagne complète non encore testée.
+
 ## 1.1.0 — 11 novembre 2026
 - Démarches complètes : entretien utile et résultat regroupés sans menus question par question.
 - Preuves débouchant sur des issues concrètes ; distinction entre objectif et mystère secondaire.

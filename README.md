@@ -1,6 +1,6 @@
 # Moteur RPG
 
-Version 1.1.0 — 11 novembre 2026.
+Version 1.2.0 — 11 novembre 2026.
 
 Moteur de jeu de rôle narratif pour un joueur et un maître du jeu humain ou assistant. Il organise les intentions, les décisions et les conséquences dans un monde cohérent. Il s'agit de règles utilisables dans une conversation, pas encore d'un logiciel exécutable.
 
@@ -12,7 +12,11 @@ Moteur de jeu de rôle narratif pour un joueur et un maître du jeu humain ou as
 
 Le tour de jeu : intention → résolution → conséquences → réaction du monde → prochaine décision.
 
+## Format de campagne
+60 sessions de 10 à 15 minutes : deux sessions quotidiennes, couvrant ensemble une journée fictive. L'histoire dure trente jours ; le calendrier réel vise trente jours et se décale en cas d'absence. Voir [la progression de campagne](CAMPAGNE_30_JOURS.md).
+
 ## Contenu
+- CAMPAGNE_30_JOURS.md : durée, progression et préparation du scénario.
 - REGLES.md : noyau, rythme, résolution et monde actif.
 - DEMARRER.md : création rapide et cadre de jeu.
 - INSTRUCTIONS_MJ.md : consignes autonomes pour un assistant.

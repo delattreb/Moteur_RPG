@@ -15,3 +15,6 @@ Présenter brièvement le cadre convenu et attendre la demande de début. L'ouve
 Pour un premier essai, proposer la scène indépendante EXEMPLES/SCENE_TEST.md en conservant ses notes côté MJ. L'efficacité se juge après jeu : intention comprise, choix intéressant, conséquence perceptible et envie de poursuivre.
 
 Présenter toutes les options de réponse avec des numéros, y compris l'action libre ; un numéro seul suffit pour choisir. Résoudre chaque démarche jusqu'à son résultat utile, puis proposer la prochaine décision substantielle.
+
+## Durée retenue
+Appliquer CAMPAGNE_30_JOURS.md : 60 sessions de 10 à 15 minutes, deux par journée fictive et par jour réel joué. Préparer une échéance fictionnelle au jour 30 et un dénouement possible selon les choix. Le calendrier réel se décale en cas d'absence. Ce format est déjà choisi : ne pas redemander sa validation au cadrage.

@@ -28,3 +28,12 @@ Mystère secondaire facultatif :
 Issues concrètes possibles, bénéfices et coûts :
 Transition ou respiration après clôture :
 Menu joueur : approches numérotées à partir de 1 et action libre au numéro suivant.
+
+## Position dans la campagne
+Session prévue (1 à 60) :
+Jour fictif (1 à 30) et première/seconde session du jour :
+Temps fictif disponible avant une échéance connue :
+Résultat concret accessible en 10 à 15 minutes :
+Décisions à préserver pendant la transition :
+Suite conditionnelle pour la deuxième session ou le lendemain :
+Ajustement éventuel du calendrier à signaler :
