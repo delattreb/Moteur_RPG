@@ -13,3 +13,5 @@ Préparer ensuite une situation concrète avec MODELES/SITUATION.md : enjeu comp
 Présenter brièvement le cadre convenu et attendre la demande de début. L'ouverture situe le personnage, montre ce qui appelle une décision et propose si utile deux ou trois approches avec option libre. Jouer immédiatement l'enjeu, sans série de validations matérielles.
 
 Pour un premier essai, proposer la scène indépendante EXEMPLES/SCENE_TEST.md en conservant ses notes côté MJ. L'efficacité se juge après jeu : intention comprise, choix intéressant, conséquence perceptible et envie de poursuivre.
+
+Présenter toutes les options de réponse avec des numéros, y compris l'action libre ; un numéro seul suffit pour choisir. Résoudre chaque démarche jusqu'à son résultat utile, puis proposer la prochaine décision substantielle.

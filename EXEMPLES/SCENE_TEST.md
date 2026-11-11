@@ -1,6 +1,6 @@
 # Le registre avant la fermeture — notes MJ
 
-Exemple fictif indépendant, non joué. Garder ces notes privées ; présenter seulement la situation perceptible. Aucun résultat prédéterminé.
+Exemple fictif indépendant. Le principe a été essayé dans une courte variante conversationnelle ; les notes ci-dessous restent une préparation, pas une sauvegarde de partie. Garder ces notes privées ; présenter seulement la situation perceptible. Aucun résultat prédéterminé.
 
 ## Cadre de l'essai
 Le personnage sait lire les registres et veut vérifier une livraison contestée. Le registre se trouve dans un dépôt. Il est dans la cour ; une employée termine son service et le gardien contrôle l'entrée. Le dépôt ferme dans une demi-heure fictive, annoncée par le gardien. Le personnage n'a pas d'autorisation d'accès établie.
@@ -26,4 +26,14 @@ L'employée veut finir sa journée sans perdre son emploi. Elle peut orienter ve
 | Demander une pause | Arrêter avant toute action encore en attente |
 
 ## Évaluation après essai
-Noter intention comprise, décisions intéressantes, conséquences visibles, temps cohérent, micro-validations évitées et retour exact du joueur. Aucun essai réellement joué n'est revendiqué par cette distribution.
+Noter intention comprise, décisions intéressantes, conséquences visibles, temps cohérent, micro-validations évitées et retour exact du joueur. Un essai court a identifié la chaîne d'entretiens comme trop longue. Une reprise regroupant les démarches, proposant des issues et clôturant une mission avec un coût a reçu le retour « c'est mieux ». Cela ne valide pas encore une campagne longue.
+
+## Contrôles supplémentaires 1.1.0
+| Situation | Comportement attendu |
+| --- | --- |
+| Rencontrer un témoin pour comprendre | Résumer l'entretien utile et ses limites ; ne pas proposer chaque question |
+| Preuve suffisante obtenue | Proposer des issues concrètes plutôt qu'imposer un nouveau témoin |
+| Choisir de privilégier le délai malgré une perte | Résoudre la livraison, montrer le coût et clore l'objectif |
+| Mission terminée, mystère secondaire ouvert | Laisser le joueur abandonner le mystère ; ne pas bloquer la clôture |
+| Nouvelle scène, même urgente | Afficher les approches et l'action libre en liste numérotée |
+| Réponse « 3 » | Appliquer uniquement l'option 3 du dernier menu |

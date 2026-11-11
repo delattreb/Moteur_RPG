@@ -20,3 +20,11 @@ Ne pas déclencher deux fois une initiative déjà effectuée. Réévaluer les p
 
 ## Avant de jouer
 L'enjeu est-il compréhensible ? Une vraie décision existe-t-elle ? Un refus ou un succès rapide laisse-t-il un monde jouable ? Les informations importantes ont-elles plusieurs accès crédibles ? Les risques sont-ils perceptibles ?
+
+## Aboutissement et choix
+Objectif concret du joueur :
+Éléments suffisants pour agir sans entretien supplémentaire :
+Mystère secondaire facultatif :
+Issues concrètes possibles, bénéfices et coûts :
+Transition ou respiration après clôture :
+Menu joueur : approches numérotées à partir de 1 et action libre au numéro suivant.

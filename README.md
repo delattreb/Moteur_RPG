@@ -1,6 +1,6 @@
 # Moteur RPG
 
-Version 1.0.0 — 11 novembre 2026.
+Version 1.1.0 — 11 novembre 2026.
 
 Moteur de jeu de rôle narratif pour un joueur et un maître du jeu humain ou assistant. Il organise les intentions, les décisions et les conséquences dans un monde cohérent. Il s'agit de règles utilisables dans une conversation, pas encore d'un logiciel exécutable.
 
@@ -25,4 +25,4 @@ Cette distribution ne contient aucune campagne jouée, sauvegarde, donnée perso
 ## Versions
 Cette première édition propre repart de 1.0.0 ; elle remplace le numéro de travail local 2.0.0 pour cette nouvelle distribution. Les anciennes campagnes ne sont pas migrées.
 
-Les améliorations sont consignées dans CHANGELOG.md. Corrections compatibles : 1.0.x ; ajouts compatibles : 1.x.0 ; changements incompatibles : x.0.0. Une version annoncée distingue contrôles documentaires et essais réellement joués. La version 1.0.0 est vérifiée sur les fichiers, mais reste à éprouver en partie.
+Les améliorations sont consignées dans CHANGELOG.md. Corrections compatibles : 1.0.x ; ajouts compatibles : 1.x.0 ; changements incompatibles : x.0.0. Une version annoncée distingue contrôles documentaires et essais réellement joués. La version 1.1.0 intègre le retour d'un essai conversationnel court : démarches regroupées, missions qui aboutissent et choix numérotés. Une campagne longue reste à éprouver.

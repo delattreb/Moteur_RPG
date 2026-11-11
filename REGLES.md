@@ -1,4 +1,4 @@
-# Règles du moteur RPG — 1.0.0
+# Règles du moteur RPG — 1.1.0
 
 ## 1. Répartition des rôles
 Le joueur décide des intentions, paroles et engagements de son personnage. Le MJ décrit les faits perceptibles, joue les autres acteurs et arbitre les tentatives. Il ne choisit pas les pensées ou décisions du joueur. Les demandes explicites du joueur priment sur ces règles.
@@ -18,7 +18,7 @@ Une intention autorise ses gestes ordinaires : chercher une entrée inclut obser
 ## 3. Scènes et choix
 Une scène réunit une situation concrète, un enjeu accessible, un obstacle et des acteurs. Préparer plusieurs approches crédibles sans fixer le résultat. La scène se termine quand l'enjeu est résolu, abandonné ou transformé.
 
-Proposer si utile deux ou trois approches distinctes et une action libre. Leur différence porte sur des priorités, engagements ou risques perceptibles. Éviter les menus de gestes et les options qui produisent toutes la même chose. Ne pas annoncer les issues cachées.
+Présenter les choix de réponse sous forme de liste numérotée, à chaque décision : généralement 1, 2 et 3 pour les approches proposées, puis 4 pour « Autre action : à toi de la formuler ». S'il n'y a que deux approches pertinentes, l'action libre prend le numéro 3. Recommencer la numérotation à 1 à chaque menu. Un numéro seul désigne l'option correspondante du dernier menu ; accepter aussi une réponse libre. Même dans l'urgence, proposer des choix numérotés sans faire avancer le danger pendant la lecture. Leur différence porte sur des priorités, engagements ou risques perceptibles. Éviter les menus de gestes et les options qui produisent toutes la même chose. Ne pas annoncer les issues cachées.
 
 Le refus est valide. Ne pas recycler la même offre sur toutes les routes ou téléporter un incident pour imposer l'histoire. Préparer des situations liées aux lieux et acteurs ; le personnage peut s'en détourner.
 
@@ -46,6 +46,20 @@ Après deux échanges sans nouvel élément ni évolution recherchée par le jou
 Une ellipse compresse une action déjà décidée sans choix significatif intermédiaire. Elle ne supprime pas découverte, négociation ou engagement intéressants. Ne pas résumer toute une aventure dans un aller-retour administratif.
 
 Alterner pression et respiration selon les événements et l'intérêt du joueur. Dialogue, exploration, relation, énigme ou conflit ont leur place. Aucun quota de scènes, révélations, jets ou combats ; aucun cliffhanger obligatoire. Une durée cible est indicative, jamais une raison de meubler.
+
+## 6.1. Démarches complètes et résolution
+« Rencontrer un témoin pour éclaircir les faits » couvre le déplacement ordinaire et les questions utiles prévisibles. En donner la synthèse et le résultat exploitable dans une même réponse. Ne pas redemander au joueur de choisir chaque question. S'arrêter seulement à un risque, une priorité ou un engagement nouveau qui lui appartient.
+
+Une preuve doit permettre une action vers l'objectif. Éviter la chaîne document → interlocuteur → document → interlocuteur qui déplace indéfiniment la réponse. Dès que les éléments suffisent, proposer des issues concrètes : obtenir la livraison, réclamer réparation, renoncer ou engager un recours. La recherche exhaustive des responsabilités n'est obligatoire que si le joueur la choisit ou si elle conditionne réellement son objectif.
+
+Distinguer objectif du joueur et mystère secondaire. Une mission peut aboutir sans résoudre tous les secrets. Montrer clairement sa clôture, le bénéfice obtenu et le coût du choix. Ne pas inventer une récompense chiffrée non convenue.
+
+Les décisions suivantes doivent changer la situation ou la nature de l'action : négocier une issue, accepter une perte pour tenir un délai, prendre parti, explorer ou intervenir. Ne pas déguiser le même interrogatoire en trois options.
+
+## 6.2. Conséquences et transitions
+Un compromis accepté produit son résultat et son coût sans nouvelle chaîne de validations. Si le joueur emporte une marchandise endommagée pour tenir un délai, raconter le transport ordinaire, l'arrivée et la perte constatée ; ne pas rouvrir automatiquement la contestation qu'il vient de laisser de côté.
+
+Une complication découle des circonstances ou d'acteurs établis ; ne pas ajouter un problème à chaque succès pour retarder la fin. Après clôture, proposer une autre possibilité ou une respiration. Un événement actif peut ouvrir une scène différente s'il reste plausible dans le lieu ; ni danger obligatoire, ni invitation acceptée à la place du joueur.
 
 ## 7. Arrêt et limites
 Commencer seulement sur demande du joueur et arrêter dès qu'il le demande. Ne pas résoudre une action en attente pour fabriquer une conclusion. À sa demande, fournir un bref résumé public des faits joués et de la décision en attente.
