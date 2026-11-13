@@ -33,4 +33,12 @@ Le site existant récupère les changements à son ouverture ou au retour sur l�
 
 ## Limites
 
-Le bilan structuré couvre les séances, le jour, le lieu de fin et la mission. L’argent, les flèches, les provisions, les blessures et les lieux intermédiaires doivent être mentionnés dans le résumé ; aucun compteur ou objet supplémentaire n’est créé par cette sauvegarde. La préparation de nuit ne doit jamais appeler cette fonction pour faire avancer l’histoire.
+Le bilan structuré couvre les séances, le jour, le lieu de fin et la mission. Les blessures et les lieux intermédiaires restent mentionnés dans le résumé. La bourse et les objets sont présentés dans le menu Inventaire à partir du relevé public ci-dessous. La préparation de nuit ne doit jamais appeler cette fonction pour faire avancer l’histoire.
+
+## Inventaire public de fin de séance
+
+À chaque clôture, ajouter à la fin de `summary` un bloc `[INVENTAIRE]` suivi d’un objet JSON puis `[/INVENTAIRE]`. Format : `{"money":"solde restant avec unité","items":[{"name":"nom","amount":"quantité avec unité","detail":"description publique"}]}`.
+
+Ce relevé contient l’inventaire complet actuel, pas seulement les acquisitions : équipement conservé, objets acquis, munitions restantes, provisions, contenants et monture si toujours possédée. Retirer les objets réellement perdus, cédés ou consommés. Conserver les unités de monnaie et les appartenances ; ne pas convertir sans règle validée ni attribuer à Corbec les biens du groupe. Un solde nul se note explicitement avec son unité ; une valeur inconnue se note « Non confirmé », jamais zéro. Ne pas inventer de chiffre. Reprendre le dernier inventaire confirmé et appliquer seulement les changements effectivement joués ; en cas d’incertitude, le signaler.
+
+Limites : 100 objets, nom 100 caractères, quantité 120, description 600, bourse 120. Le résumé entier, bloc inclus, reste limité à 4 000 caractères. Si le relevé ne tient pas, signaler la limite sans supprimer silencieusement des objets. Le site montre le dernier relevé valide avec son numéro de séance ; sans relevé, il signale le solde manquant et affiche les seules fiches initiales. Aucun ancien bilan n’est réécrit automatiquement.
