@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {initialState,validateState,createProgress} from './dist/auvrenne-state.mjs';
 import {prepareCampaign,recordSession} from './dist/auvrenne-campaign.mjs';
-import {createJournal} from './dist/auvrenne-app.mjs';
+import {createJournal,readInventory} from './dist/auvrenne-app.mjs';
 import {createCloudStore} from './dist/cloud-sync.mjs';
 import {createAutoSync} from './dist/autosave-core.mjs';
 import fs from 'node:fs';
@@ -125,3 +125,19 @@ for(const box of labelBoxes){
 }
 console.log('Carte : huit cartouches médiévaux, sans chevauchement entre noms ou avec les repères au zoom minimal.');
 
+
+const inventoryState=recordSession(prepareCampaign(initialState()),{day:1,place:'valcroix',mission:'proposed',summary:'Bilan test. [INVENTAIRE]'+JSON.stringify({money:'0 denier',items:[{name:'Corde <test>',amount:'1',detail:'Objet confirmé.'}]})+'[/INVENTAIRE]'});
+assert.equal(readInventory(inventoryState).money,'0 denier');
+assert.equal(readInventory(inventoryState).items.length,1);
+p.apply(inventoryState);window.location.hash='#inventaire';handlers['window:hashchange']();
+assert.match(node('#content').innerHTML,/0 denier/);
+assert.match(node('#content').innerHTML,/Corde &lt;test&gt;/);
+assert.ok(!node('#content').innerHTML.includes('[INVENTAIRE]'));
+click({object:'saved-0'});assert.match(node('#detail-body').innerHTML,/Objet confirmé/);
+const emptyInventory=structuredClone(inventoryState);
+emptyInventory.campaign.log[0].summary='[INVENTAIRE]{"money":"Non confirmé","items":[]}[/INVENTAIRE]';
+assert.equal(readInventory(emptyInventory).items.length,0);
+emptyInventory.campaign.log[0].summary='[INVENTAIRE]{"money":100,"items":[]}[/INVENTAIRE]';
+assert.equal(readInventory(emptyInventory).money,null);
+assert.equal(readInventory(initialState()).money,null);
+console.log('Inventaire : solde nul, inconnus, objets dynamiques, fiches, échappement HTML et compatibilité des anciennes sauvegardes vérifiés.');
